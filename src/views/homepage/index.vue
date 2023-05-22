@@ -1,21 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import HomePageHeader from "./components/header.vue";
-const routerActive = ref('/homepage/home')
-const roterList = ref([
-  {
-    title: '主页',
-    path: '/homepage/home'
-  },
-  {
-    title: 'Stable Diffusion在线版',
-    path: '/homepage/other'
-  },
-  {
-    title: 'ChatGpt 在线版',
-    path: '/homepage/chatgpt'
-  }
-])
 </script>
 
 <template>
