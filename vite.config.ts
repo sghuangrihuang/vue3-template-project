@@ -9,11 +9,6 @@ export default ({ mode }) => defineConfig({
   },
   plugins: [vue()],
   base: './',	//不加打包后白屏
-  // server: {             
-  //   host: '0.0.0.0',	
-  //   // port: 8080,      
-  //   open: true
-  // },
   resolve:{   
     alias:[   
       {

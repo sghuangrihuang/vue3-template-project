@@ -1,7 +1,10 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router';
 import routes from './routes';
 const router = createRouter({
-  history: createWebHistory(),
+  history:
+    import.meta.env.VITE_APP_ROUTE_MODE === 'hash'
+      ? createWebHashHistory()
+      : createWebHistory(),
   routes,
 });
 export default router
