@@ -8,7 +8,7 @@ export default ({ mode }) => defineConfig({
     'process.env': loadEnv(mode, process.cwd())
   },
   plugins: [vue()],
-  base: './',	//不加打包后白屏
+  base: './',
   resolve:{   
     alias:[   
       {
