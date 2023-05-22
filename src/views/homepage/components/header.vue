@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
-const routerActive = ref('/homepage/home')
+const defaultRouter: string = '/homepage/home'
+const routerActive = ref(defaultRouter)
 const roterList = ref([
   {
     title: '主页',
