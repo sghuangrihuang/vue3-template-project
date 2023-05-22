@@ -130,12 +130,10 @@
 
 <script lang="ts" setup>
 import { ref, reactive, onMounted } from 'vue'
-import type { FormInstance, Action } from 'element-plus'
-import { ElNotification, ElMessage, ElMessageBox } from 'element-plus'
+import type { FormInstance } from 'element-plus'
 import axios from 'axios'
 
 const formRef = ref<FormInstance>()
-const percentage = ref<number>(100)
 // do not use same name with ref
 const percentageFormat = (percentage: number) => (percentage === 100 ? 'Full' : `${percentage.toFixed(2)}% ETA: ${tabs_data.progress.eta_relative.toFixed(2)}/s`)
 
@@ -273,6 +271,7 @@ onMounted(async () => {
 const onSubmit = async (formEl: FormInstance | undefined) => {
   tabs_data.submit_disabled = true,
     tabs_data.percentageFlag = true
+  console.log(formEl)
   // let percentageVal = setInterval(() =>{
   //     axios({url: '/getProgress',method: 'GET',}).then(response => {
   //         tabs_data.progress = response.data

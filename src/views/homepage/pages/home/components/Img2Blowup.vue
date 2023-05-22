@@ -58,82 +58,9 @@
 <script lang="ts" setup>
 import { ref, reactive, onMounted } from 'vue'
 import type { FormInstance } from 'element-plus'
-import { ElNotification } from 'element-plus'
 import { UploadFilled } from '@element-plus/icons-vue'
 import axios from 'axios'
 const formRef = ref<FormInstance>()
-const options_data = {
-  hr_upscalers: [
-    {
-      label: "潜变量 ",
-      value: "Latent"
-    },
-    {
-      label: "潜变量 (抗锯齿) ",
-      value: "Latent (antialiased)"
-    },
-    {
-      label: "潜变量 (bicubic) ",
-      value: "Latent (bicubic)"
-    },
-    {
-      label: "潜变量 (bicubic 抗锯齿) ",
-      value: "Latent (bicubic antialiased)"
-    },
-    {
-      label: "潜变量 (最近邻) ",
-      value: "Latent (nearest)"
-    },
-    {
-      label: "潜变量 (最近邻-整数) ",
-      value: "Latent (nearest-exact)"
-    },
-    {
-      label: "无 ",
-      value: "None"
-    },
-    {
-      label: "Lanczos ",
-      value: "Lanczos"
-    },
-    {
-      label: "最邻近(整数缩放) ",
-      value: "Nearest"
-    },
-    {
-      label: "BSRGAN ",
-      value: "BSRGAN"
-    },
-    {
-      label: "ESRGAN_4x ",
-      value: "ESRGAN_4x"
-    },
-    {
-      label: "LDSR ",
-      value: "LDSR"
-    },
-    {
-      label: "R-ESRGAN 4x+ ",
-      value: "R-ESRGAN 4x+"
-    },
-    {
-      label: "R-ESRGAN 4x+ Anime6B ",
-      value: "R-ESRGAN 4x+ Anime6B"
-    },
-    {
-      label: "ScuNET ",
-      value: "ScuNET"
-    },
-    {
-      label: "ScuNET PSNR ",
-      value: "ScuNET PSNR"
-    },
-    {
-      label: "SwinIR 4x ",
-      value: "SwinIR_4x"
-    }
-  ]
-}
 // do not use same name with ref
 
 const tabs_data = reactive({
@@ -193,7 +120,7 @@ const onSubmit = async (formEl: FormInstance | undefined) => {
     });
   tabs_data.percentageFlag = false
   tabs_data.submit_disabled = false,
-    console.log('submit!')
+  console.log(formEl)
 }
 const onReset = (formEl: FormInstance | undefined) => {
   if (!formEl) return
