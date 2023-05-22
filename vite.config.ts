@@ -5,7 +5,7 @@ import { resolve } from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: '/',	//不加打包后白屏
+  base: './',	//不加打包后白屏
   // server: {             
   //   host: '0.0.0.0',	
   //   // port: 8080,      
