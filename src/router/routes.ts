@@ -7,20 +7,20 @@ const routes: RouterOptions['routes'] = [
   },
   {
     path: '/homepage',
-    component: () => import('@/views/homepage/index.vue'),
+    component: () => import('~/views/homepage/index.vue'),
     redirect: '/homepage/home',
     children: [
       {
         path: '/homepage/home',
-        component: () => import('@/views/homepage/pages/home/index.vue'),
+        component: () => import('~/views/homepage/pages/home/index.vue'),
       },
       {
         path: '/homepage/other',
-        component: () => import('@/views/homepage/pages/other/index.vue'),
+        component: () => import('~/views/homepage/pages/other/index.vue'),
       },
       {
         path: '/homepage/chatgpt',
-        component: () => import('@/views/homepage/pages/chatgpt/index.vue'),
+        component: () => import('~/views/homepage/pages/chatgpt/index.vue'),
       }
     ]
   },

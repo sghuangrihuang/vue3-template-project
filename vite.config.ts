@@ -1,20 +1,50 @@
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { resolve } from 'path'
+import path from 'path'
+const pathSrc = path.resolve(__dirname, 'src')
+
+import Unocss from 'unocss/vite'
+import {
+  presetAttributify,
+  presetIcons,
+  presetUno,
+  transformerDirectives,
+  transformerVariantGroup,
+} from 'unocss'
 
 // https://vitejs.dev/config/
 export default ({ mode }) => defineConfig({
   define: {
     'process.env': loadEnv(mode, process.cwd())
   },
-  plugins: [vue()],
   base: './',
   resolve: {
-    alias: [
-      {
-        find: '@',
-        replacement: resolve(__dirname, 'src')
-      }
-    ]
-  }
+    alias: {
+      '~/': `${pathSrc}/`,
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "~/styles/element/index.scss" as *;`,
+      },
+    },
+  },
+  plugins: [
+    vue(),
+    Unocss({
+      presets: [
+        presetUno(),
+        presetAttributify(),
+        presetIcons({
+          scale: 1.2,
+          warn: true,
+        }),
+      ],
+      transformers: [
+        transformerDirectives(),
+        transformerVariantGroup(),
+      ]
+    }),
+  ],
 })

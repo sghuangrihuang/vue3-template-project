@@ -4,7 +4,7 @@
 <template>
   <el-row class="layout-view">
     <el-col :span="4"></el-col>
-    <el-col :span="16">
+    <el-col class="layout-container" :span="16">
       <slot></slot>
     </el-col>
     <el-col :span="4"></el-col>
@@ -16,5 +16,10 @@
   position: relative;
   height: 100%;
   overflow: hidden;
+  .layout-container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
 }
 </style>

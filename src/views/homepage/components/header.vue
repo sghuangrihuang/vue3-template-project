@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { toggleDark } from "~/composables";
 import { ref } from "vue";
 const defaultRouter: string = '/homepage/home'
 const routerActive = ref(defaultRouter)
@@ -24,7 +25,14 @@ const roterList = ref([
     <el-menu class="homepage-menu" router :default-active="routerActive" :ellipsis="false" mode="horizontal">
       <el-menu-item v-for="item in roterList" :index="item.path" :key="item.path">{{ item.title }}</el-menu-item>
     </el-menu>
-    <div class="homepage-setting"></div>
+    <div class="homepage-setting" @click="toggleDark()">
+      <button
+        class="border-none w-full bg-transparent cursor-pointer"
+        style="height: var(--el-menu-item-height)"
+      >
+        <i inline-flex i="dark:el-moon el-sunny" />
+      </button>
+    </div>
   </div>
 </template>
 

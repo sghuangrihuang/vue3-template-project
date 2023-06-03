@@ -44,14 +44,38 @@ const dataList = ref([
 
 <template>
   <Layout>
-    <el-tabs v-model="selectComp" type="border-card">
+    <el-tabs class="tabs-container" v-model="selectComp" type="border-card">
       <el-tab-pane v-for="item in dataList" :key="item.title" :label="item.title" :name="item.title" lazy>
-        <component :is="item.component"></component>
+        <el-scrollbar>
+          <component :is="item.component"></component>
+        </el-scrollbar>
       </el-tab-pane>
     </el-tabs>
   </Layout>
 </template>
 
-<style scoped lang="scss">
-
+<style lang="scss">
+.tabs-container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .el-tabs__content {
+    padding: 0;
+    flex: 1;
+    overflow: hidden;
+  }
+  .el-scrollbar__view {
+    padding: 10px;
+  }
+  .el-tab-pane {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+  }
+  .el-tabs__header {
+    flex: 0 0 auto;
+  }
+}
 </style>
