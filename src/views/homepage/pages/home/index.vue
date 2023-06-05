@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, shallowRef } from "vue";
 import Layout from "./../../components/layout.vue";
 import Text2ImgPro from "./components/Text2ImgPro.vue";
 import Img2ImgPro from "./components/Img2ImgPro.vue";
@@ -10,7 +10,7 @@ import Img2Tag from './components/Img2Tag.vue'
 import Png2Info from "./components/Png2Info.vue";
 
 const selectComp = ref('图片生成(专业版)')
-const dataList = ref([
+const dataList = shallowRef([
   {
     title: '图片生成(专业版)',
     component: Text2ImgPro

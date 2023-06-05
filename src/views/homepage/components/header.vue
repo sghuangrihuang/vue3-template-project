@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { toggleDark } from "~/composables";
+import { toggleDark, isDark } from "~/composables";
+import { Moon, Sunny } from "@element-plus/icons-vue";
 import { ref } from "vue";
 const defaultRouter: string = '/homepage/home'
 const routerActive = ref(defaultRouter)
@@ -26,12 +27,9 @@ const roterList = ref([
       <el-menu-item v-for="item in roterList" :index="item.path" :key="item.path">{{ item.title }}</el-menu-item>
     </el-menu>
     <div class="homepage-setting" @click="toggleDark()">
-      <button
-        class="border-none w-full bg-transparent cursor-pointer"
-        style="height: var(--el-menu-item-height)"
-      >
-        <i inline-flex i="dark:el-moon el-sunny" />
-      </button>
+      <el-icon class="border-none w-full bg-transparent cursor-pointer" :size="20" style="height: var(--el-menu-item-height)">
+        <component :is="isDark ? Sunny : Moon"></component>
+      </el-icon>
     </div>
   </div>
 </template>
