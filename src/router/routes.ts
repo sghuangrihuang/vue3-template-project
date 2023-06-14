@@ -15,12 +15,16 @@ const routes: RouterOptions['routes'] = [
         component: () => import('~/views/homepage/pages/home/index.vue'),
       },
       {
-        path: '/homepage/other',
-        component: () => import('~/views/homepage/pages/other/index.vue'),
+        path: '/homepage/sd',
+        component: () => import('~/views/homepage/pages/sd/index.vue'),
       },
       {
         path: '/homepage/chatgpt',
         component: () => import('~/views/homepage/pages/chatgpt/index.vue'),
+      },
+      {
+        path: '/homepage/model',
+        component: () => import('~/views/homepage/pages/model/index.vue'),
       }
     ]
   },

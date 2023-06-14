@@ -11,11 +11,15 @@ const roterList = ref([
   },
   {
     title: 'Stable Diffusion在线版',
-    path: '/homepage/other'
+    path: '/homepage/sd'
   },
   {
     title: 'ChatGpt 在线版',
     path: '/homepage/chatgpt'
+  },
+  {
+    title: '模型广场',
+    path: '/homepage/model'
   }
 ])
 </script>
@@ -28,7 +32,7 @@ const roterList = ref([
     </el-menu>
     <div class="homepage-setting" @click="toggleDark()">
       <el-icon class="border-none w-full bg-transparent cursor-pointer" :size="20" style="height: var(--el-menu-item-height)">
-        <component :is="isDark ? Sunny : Moon"></component>
+        <component :is="isDark ? Moon:Sunny"></component>
       </el-icon>
     </div>
   </div>
