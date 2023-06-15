@@ -34,10 +34,9 @@ onMounted(async () => {
 </script>
 
 <template>
-  <Layout>
-        
+  <Layout scrollbar>
     <Waterfall :list="model_data.list">
-      <template #item="{ item, url, index }">
+      <template #item="{ item }">
         <div class="card" v-if="item.model_images && item.model_images.length > 0">
           <LazyImg :url="item.model_images[0].url" />
           <p class="text">{{item.name}}</p>
