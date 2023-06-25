@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { toggleDark, isDark } from "~/composables";
 import { Moon, Sunny } from "@element-plus/icons-vue";
-import { ref } from "vue";
 const defaultRouter: string = '/homepage/home'
 const routerActive = ref(defaultRouter)
 const roterList = ref([

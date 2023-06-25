@@ -12,6 +12,8 @@ import {
   transformerVariantGroup,
 } from 'unocss'
 
+import AutoImport from 'unplugin-auto-import/vite'
+
 // https://vitejs.dev/config/
 export default ({ mode }) => defineConfig({
   define: {
@@ -46,5 +48,9 @@ export default ({ mode }) => defineConfig({
         transformerVariantGroup(),
       ]
     }),
+    AutoImport({
+      imports: ['vue', 'vue-router'],
+      dts: './src/auto-import.d.ts'
+    })
   ],
 })
