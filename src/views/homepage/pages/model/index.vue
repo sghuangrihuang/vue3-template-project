@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import Layout from "./../../components/layout.vue";
-import { LazyImg, Waterfall } from 'vue-waterfall-plugin-next'
-import { toRaw } from '@vue/reactivity'
+import { Waterfall } from 'vue-waterfall-plugin-next'
 import 'vue-waterfall-plugin-next/dist/style.css'
+import CardInfo from "./components/card-info.vue";
 
-import { reactive, onMounted } from 'vue'
 import { ElNotification } from 'element-plus'
 import axios from 'axios'
 
@@ -35,12 +34,9 @@ onMounted(async () => {
 
 <template>
   <Layout scrollbar>
-    <Waterfall :list="model_data.list">
+    <Waterfall :list="model_data.list" :width="250" :gutter="16">
       <template #item="{ item }">
-        <div class="card" v-if="item.model_images && item.model_images.length > 0">
-          <LazyImg :url="item.model_images[0].url" />
-          <p class="text">{{item.name}}</p>
-        </div>
+        <CardInfo :item="item"/>
       </template>
     </Waterfall>
   </Layout>
