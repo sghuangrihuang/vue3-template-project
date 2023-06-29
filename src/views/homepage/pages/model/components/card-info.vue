@@ -3,6 +3,7 @@ import CardItem from './../types/card-item'
 import { LazyImg } from 'vue-waterfall-plugin-next'
 
 defineProps<{
+  // item选项
   item: CardItem
 }>()
 
@@ -13,15 +14,22 @@ defineProps<{
     <div class="card-image">
       <LazyImg :url="item.model_images[0].url" />
     </div>
+    <div class="card-top">
+      <div class="card-top-div">
+        <span class="card-top-data">Checkpoint</span>
+      </div>
+    </div>
     <div class="card-footer">
-      <!-- <div class="card-group">
+      <div class="card-group">
         <div class="card-avatar">
-          <img class="card-avatar-info" src="" />
+          <LazyImg class="card-avatar-info" :url="'https://img0.baidu.com/it/u=252500402,1876180326&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1688144400&t=db877e36bb9f8daa16051bd62468006c'" />
         </div>
-      </div> -->
+      </div>
       <div class="card-footer-b">
         <div class="card-name">
           <div class="card-name-data">{{item.name}}</div>
+        </div>
+        <div class="mantine-1omorxi">
         </div>
       </div>
     </div>
@@ -38,9 +46,49 @@ defineProps<{
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 3px, rgba(0, 0, 0, 0.05) 0px 10px 15px -5px, rgba(0, 0, 0, 0.04) 0px 7px 7px -5px;
   border: 1px solid rgb(55, 58, 64);
-  position: relative;
   overflow: hidden;
   background: linear-gradient(rgb(43, 138, 62) 0%, rgb(37, 38, 43) 100%);
+  .card-top {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    .card-top-div {
+      font-size: 10px;
+      height: 18px;
+      line-height: 16px;
+      text-decoration: none;
+      padding: 0px 8px;
+      box-sizing: border-box;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      text-transform: uppercase;
+      border-radius: 4px;
+      font-weight: 700;
+      letter-spacing: 0.25px;
+      cursor: inherit;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      border: 1px solid transparent;
+      color: white;
+      backdrop-filter: blur(7px);
+      box-shadow: rgba(37, 38, 43, 0.2) 1px 2px 3px -1px;
+      background: rgba(30, 133, 230, 0.4);
+    }
+    .card-top-data {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
   .card-footer {
     display: flex;
     flex-direction: column;
@@ -126,6 +174,16 @@ defineProps<{
       height: 100%;
       display: block;
     }
+  }
+  .mantine-1omorxi {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    gap: 4px;
   }
 }
 </style>

@@ -11,15 +11,15 @@ const model_data = reactive({
   list: []
 })
 
-onMounted(async () => {
-  await axios({
-    url: '/getModels',
-    method: 'GET',
-  }).then(response => {
-    model_data.list = toRaw(response.data.data)
+const fetchData = async () => {
+  try {
+    const response =  await axios({
+      url: '/getModels',
+      method: 'GET',
+    })
     // https://web-proxy.bitamin.ml/
-
-  }).catch(error => {
+    model_data.list = toRaw(response.data.data)
+  } catch (error) {
     console.log(error)
     ElNotification({
       title: '服务器不在线',
@@ -27,21 +27,44 @@ onMounted(async () => {
       duration: 0,
       type: 'error'
     })
-  })
+  }
+}
 
+onMounted(() => {
+  fetchData()
 })
 </script>
 
 <template>
-  <Layout scrollbar>
-    <Waterfall :list="model_data.list" :width="250" :gutter="16">
-      <template #item="{ item }">
-        <CardInfo :item="item"/>
-      </template>
-    </Waterfall>
+  <Layout>
+    <div class="model-container">
+      <div class="model-header"></div>
+      <el-scrollbar class="model-content">
+        <Waterfall :list="model_data.list" :width="250" :gutter="16">
+          <template #item="{ item }">
+            <CardInfo :item="item"/>
+          </template>
+        </Waterfall>
+      </el-scrollbar>
+    </div>
   </Layout>
 </template>
 
 <style scoped lang="scss">
-
+.model-container {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  .model-header {
+    flex: 0 0 auto;
+    width: auto;
+  }
+  .model-content {
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+  }
+}
 </style>
