@@ -1,11 +1,23 @@
 <script setup lang="ts">
 import CardItem from './../types/card-item'
 import { LazyImg } from 'vue-waterfall-plugin-next'
+import { View } from "@element-plus/icons-vue";
+const defaultUrl = 'https://img0.baidu.com/it/u=252500402,1876180326&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1688144400&t=db877e36bb9f8daa16051bd62468006c'
 
 defineProps<{
   // item选项
   item: CardItem
 }>()
+
+const imageVisble = ref(false)
+
+const toggleDark = () => {
+  imageVisble.value = true
+}
+
+const closeImageVisble = () => {
+  imageVisble.value = false
+}
 
 </script>
 
@@ -13,6 +25,9 @@ defineProps<{
   <div class="card-info" v-if="item.model_images && item.model_images.length > 0">
     <div class="card-image">
       <LazyImg :url="item.model_images[0].url" />
+    </div>
+    <div class="card-view" @click="toggleDark()">
+      <el-icon ><View /></el-icon>
     </div>
     <div class="card-top">
       <div class="card-top-div">
@@ -22,7 +37,7 @@ defineProps<{
     <div class="card-footer">
       <div class="card-group">
         <div class="card-avatar">
-          <LazyImg class="card-avatar-info" :url="'https://img0.baidu.com/it/u=252500402,1876180326&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1688144400&t=db877e36bb9f8daa16051bd62468006c'" />
+          <LazyImg class="card-avatar-info" :url="defaultUrl" />
         </div>
       </div>
       <div class="card-footer-b">
@@ -33,6 +48,7 @@ defineProps<{
         </div>
       </div>
     </div>
+    <el-image-viewer v-if="imageVisble" :url-list="item.model_images.map(item => item.url)" teleported hideOnClickModal @close="closeImageVisble"></el-image-viewer>
   </div>
 </template>
 
@@ -184,6 +200,21 @@ defineProps<{
     -webkit-box-pack: justify;
     justify-content: space-between;
     gap: 4px;
+  }
+  .card-view {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
   }
 }
 </style>
