@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Layout from "./../../components/layout.vue";
 import { Waterfall } from 'vue-waterfall-plugin-next'
 import 'vue-waterfall-plugin-next/dist/style.css'
 import CardInfo from "./components/card-info.vue";
@@ -9,7 +8,10 @@ import { ElNotification } from 'element-plus'
 import axios from 'axios'
 
 const selectTab = ref('all')
-
+const props = defineProps({
+  /** 是否开启滚动条 */
+  scrollbar: Boolean
+})
 const tabList = ref([
   {
     k: 'ALL',
@@ -55,23 +57,57 @@ onMounted(() => {
 </script>
 
 <template>
-  <Layout>
-    <div class="model-container">
-      <el-tabs v-model="selectTab" class="model-header" @tab-click="handleClick">
-        <el-tab-pane v-for="item in tabList" :label="item.k" :name="item.v"></el-tab-pane>
-      </el-tabs>
-      <el-scrollbar class="model-content">
-        <Waterfall :list="model_data.list" :width="250" :gutter="16">
-          <template #item="{ item }">
-            <CardInfo :item="item"/>
-          </template>
-        </Waterfall>
-      </el-scrollbar>
-    </div>
-  </Layout>
+  <el-row class="layout-view">
+    <el-col class="layout-container">
+      <template v-if="props.scrollbar">
+        <el-scrollbar>
+          <div class="model-container">
+            <el-tabs v-model="selectTab" class="model-header" @tab-click="handleClick">
+              <el-tab-pane v-for="item in tabList" :label="item.k" :name="item.v"></el-tab-pane>
+            </el-tabs>
+            <el-scrollbar class="model-content">
+              <Waterfall :list="model_data.list" :width="300" backgroundColor="transparent" :gutter="10">
+                <template #item="{ item }">
+                  <CardInfo :item="item"/>
+                </template>
+              </Waterfall>
+            </el-scrollbar>
+          </div>
+        </el-scrollbar>
+      </template>
+      <template v-else>
+        <div class="model-container">
+          <el-tabs v-model="selectTab" class="model-header" @tab-click="handleClick">
+            <el-tab-pane v-for="item in tabList" :label="item.k" :name="item.v"></el-tab-pane>
+          </el-tabs>
+          <el-scrollbar class="model-content">
+            <Waterfall :list="model_data.list" :width="300" backgroundColor="transparent" :gutter="10">
+              <template #item="{ item }">
+                <CardInfo :item="item"/>
+              </template>
+            </Waterfall>
+          </el-scrollbar>
+        </div>
+      </template>
+    </el-col>
+  </el-row>
+    
 </template>
 
+
 <style scoped lang="scss">
+
+.layout-view {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  .layout-container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
 .model-container {
   position: relative;
   height: 100%;

@@ -31,13 +31,13 @@ const closeImageVisble = () => {
     </div>
     <div class="card-top">
       <div class="card-top-div">
-        <span class="card-top-data">Checkpoint</span>
+        <span class="card-top-data">{{item.type}}</span>
       </div>
     </div>
     <div class="card-footer">
       <div class="card-group">
         <div class="card-avatar">
-          <LazyImg class="card-avatar-info" :url="defaultUrl" />
+          <LazyImg class="card-avatar-info" :title="item.creator_username" :url="item.creator_image ? item.creator_image : defaultUrl" />
         </div>
       </div>
       <div class="card-footer-b">
