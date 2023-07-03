@@ -24,15 +24,16 @@ const tabList = ref([
 ])
 
 const model_data = reactive({
-  input1:"",
+  name: "",
   list: []
 })
 
-const fetchData = async () => {
+const fetchData = async (params= {}) => {
   try {
     const response =  await axios({
       url: '/getModels',
       method: 'GET',
+      params: params
     })
     // https://web-proxy.bitamin.ml/
     model_data.list = toRaw(response.data.data)
@@ -50,6 +51,10 @@ const fetchData = async () => {
 const handleClick = (tab: TabsPaneContext) => {
   // const currenIndex = tab.index
   console.log(tab)
+}
+
+const searchName = () => {
+  fetchData({name: model_data.name})
 }
 
 onMounted(() => {
@@ -84,11 +89,12 @@ onMounted(() => {
               <el-tab-pane v-for="item in tabList" :label="item.k" :name="item.v"></el-tab-pane>
             </el-tabs>
             <el-input
-              v-model="model_data.input1"
+              v-model="model_data.name"
               class="search w-50 m-2"
               size="large"
               placeholder="Please Input"
               :prefix-icon="Search"
+              @keyup.enter="searchName"
             />
             <Waterfall :list="model_data.list" :width="300" backgroundColor="transparent" :gutter="10">
               <template #item="{ item }">
