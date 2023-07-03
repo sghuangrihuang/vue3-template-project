@@ -24,6 +24,7 @@ const tabList = ref([
 ])
 
 const model_data = reactive({
+  input1:"",
   list: []
 })
 
@@ -77,10 +78,18 @@ onMounted(() => {
       </template>
       <template v-else>
         <div class="model-container">
-          <el-tabs v-model="selectTab" class="model-header" @tab-click="handleClick">
-            <el-tab-pane v-for="item in tabList" :label="item.k" :name="item.v"></el-tab-pane>
-          </el-tabs>
+          
           <el-scrollbar class="model-content">
+            <el-tabs v-model="selectTab" class="model-header" @tab-click="handleClick">
+              <el-tab-pane v-for="item in tabList" :label="item.k" :name="item.v"></el-tab-pane>
+            </el-tabs>
+            <el-input
+              v-model="model_data.input1"
+              class="search w-50 m-2"
+              size="large"
+              placeholder="Please Input"
+              :prefix-icon="Search"
+            />
             <Waterfall :list="model_data.list" :width="300" backgroundColor="transparent" :gutter="10">
               <template #item="{ item }">
                 <CardInfo :item="item"/>
@@ -96,7 +105,9 @@ onMounted(() => {
 
 
 <style scoped lang="scss">
-
+.search {
+  display: inline;
+}
 .layout-view {
   position: relative;
   height: 100%;
@@ -115,9 +126,12 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   .model-header {
+    margin-top: 20px;
+    margin-left: 20px;
     flex: 0 0 auto;
     width: auto;
     :deep(.el-tabs__header) {
+      margin: 0px;
       .el-tabs__nav {
         gap: 8px;
       }
@@ -146,11 +160,11 @@ onMounted(() => {
         border: 1px solid transparent;
         color: rgb(255, 255, 255);
         text-transform: uppercase;
-        margin-right: 8px;
         &.is-active {
           background: rgb(25, 113, 194);
         }
       }
+      
     }
   }
   .model-content {

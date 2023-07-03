@@ -76,6 +76,7 @@ const dataList = shallowRef([
   }
   .el-tabs__header {
     flex: 0 0 auto;
+    margin-bottom: 0px;
   }
 }
 </style>

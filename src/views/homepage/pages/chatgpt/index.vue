@@ -4,10 +4,14 @@ import Layout from "./../../components/layout.vue";
 
 <template>
   <Layout>
-    <div class="">chatgpt</div>
+    <iframe src="https://chatweb.bitamin.ink"></iframe>
   </Layout>
 </template>
 
 <style scoped lang="scss">
-
+iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
 </style>
