@@ -1,9 +1,24 @@
-<script setup lang="ts">
-
-</script>
 <template>
-  <router-view></router-view>
+  <div class="bugpage">
+  </div>
 </template>
 
-<style>
+<script>
+import Services from '~/services'
+export default {
+  name: 'app',
+  created() {
+    this.login()
+  },
+  methods: {
+    async login() {
+      try {
+      } catch (_) {
+      }
+    }
+  }
+}
+
+</script>
+<style scoped lang="scss">
 </style>
