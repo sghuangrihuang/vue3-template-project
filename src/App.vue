@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Services from '~/services'
+
 export default {
   name: 'app',
   created() {
