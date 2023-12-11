@@ -13,54 +13,56 @@ import {
 } from 'unocss'
 
 import AutoImport from 'unplugin-auto-import/vite'
-
 // https://vitejs.dev/config/
-export default ({ mode }) => defineConfig({
-  define: {
-    'process.env': loadEnv(mode, process.cwd())
-  },
-  server: {
-    port: 8023,
-    proxy: {
-      [process.env.VUE_APP_BASE_API]: {
-        target: process.env.VUE_APP_BASE_URL,   //接口地址
-        changeOrigin: true,
-        rewrite: (path) => path.replace('^' + process.env.VUE_APP_BASE_API, '')
-      },
-    }
-  },
-  base: './',
-  resolve: {
-    alias: {
-      '~/': `${pathSrc}/`,
+export default ({ mode }) => {
+  const viteEnv = loadEnv(mode, process.cwd())
+  return defineConfig({
+    define: {
+      'process.env': viteEnv
     },
-  },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@use "~/styles/element/index.scss" as *;`,
+    server: {
+      port: 8023,
+      proxy: {
+        [viteEnv.VITE_APP_BASE_API]: {
+          target: viteEnv.VITE_APP_BASE_URL,
+          changeOrigin: true,
+          rewrite: path => path.replace(new RegExp(`^${viteEnv.VITE_APP_BASE_API}`), ''),
+        },
+      }
+    },
+    base: './',
+    resolve: {
+      alias: {
+        '~/': `${pathSrc}/`,
       },
     },
-  },
-  plugins: [
-    vue(),
-    Unocss({
-      presets: [
-        presetUno(),
-        presetAttributify(),
-        presetIcons({
-          scale: 1.2,
-          warn: true,
-        }),
-      ],
-      transformers: [
-        transformerDirectives(),
-        transformerVariantGroup(),
-      ]
-    }),
-    AutoImport({
-      imports: ['vue', 'vue-router'],
-      dts: './src/auto-import.d.ts'
-    })
-  ],
-})
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@use "~/styles/element/index.scss" as *;`,
+        },
+      },
+    },
+    plugins: [
+      vue(),
+      Unocss({
+        presets: [
+          presetUno(),
+          presetAttributify(),
+          presetIcons({
+            scale: 1.2,
+            warn: true,
+          }),
+        ],
+        transformers: [
+          transformerDirectives(),
+          transformerVariantGroup(),
+        ]
+      }),
+      AutoImport({
+        imports: ['vue', 'vue-router'],
+        dts: './src/auto-import.d.ts'
+      })
+    ],
+  })
+}

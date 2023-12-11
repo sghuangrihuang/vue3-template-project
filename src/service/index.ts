@@ -14,7 +14,7 @@ interface ResConfig<T, R> extends RequestConfig<ResData<R>> {
 }
 
 const request = new Request({
-  baseURL: import.meta.env.VITE_APP_BASE_URL + import.meta.env.VITE_APP_BASE_API,
+  baseURL: import.meta.env.VITE_APP_BASE_API,
   timeout: 1000 * 60 * 5,
   interceptors: {
     // 请求拦截器
