@@ -1,13 +1,8 @@
 <script setup lang="ts">
-import HomePageHeader from "./components/header.vue";
 </script>
 
 <template>
   <div class="z-homepage-container">
-    <HomePageHeader class="z-homepage-header" />
-    <div class="z-homepage-container">
-      <router-view></router-view>
-    </div>
   </div>
 </template>
 
