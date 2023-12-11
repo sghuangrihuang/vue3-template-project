@@ -1,9 +1,10 @@
 import request from '~/service'
-import type { IGetParams, IGetRes } from './types'
-export const getAddrsList = (data: IGetParams) => {
-  return request<IGetParams, IGetRes>({
-    url: '/common/postcode/getAddrs',
+import type { IGetUrl } from './types'
+export const getConfigParameters = (data?: IGetUrl) => {
+  return request<IGetUrl>({
+    url: '/get_config_parameters',
     method: 'GET',
-    data,
+    data
   })
 }
+

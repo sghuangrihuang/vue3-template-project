@@ -4,8 +4,9 @@
   </div>
 </template>
 
-<script>
-import { getAddrsList } from './api'
+<script lang="ts">
+import { getConfigParameters } from './api'
+
 export default {
   name: 'app',
   created() {
@@ -14,7 +15,7 @@ export default {
   methods: {
     async login() {
       try {
-        await getAddrsList()
+        await getConfigParameters()
       } catch (_) {
       }
     }
