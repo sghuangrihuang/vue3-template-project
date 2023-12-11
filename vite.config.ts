@@ -19,6 +19,16 @@ export default ({ mode }) => defineConfig({
   define: {
     'process.env': loadEnv(mode, process.cwd())
   },
+  server: {
+    port: 8023,
+    proxy: {
+      [process.env.VUE_APP_BASE_API]: {
+        target: process.env.VUE_APP_BASE_URL,   //接口地址
+        changeOrigin: true,
+        rewrite: (path) => path.replace('^' + process.env.VUE_APP_BASE_API, '')
+      },
+    }
+  },
   base: './',
   resolve: {
     alias: {

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-
+import { getAddrsList } from './api'
 export default {
   name: 'app',
   created() {
@@ -14,6 +14,7 @@ export default {
   methods: {
     async login() {
       try {
+        await getAddrsList()
       } catch (_) {
       }
     }
