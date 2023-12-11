@@ -15,7 +15,8 @@ export default {
   methods: {
     async login() {
       try {
-        await getConfigParameters()
+        const data = await getConfigParameters()
+        console.log(data)
       } catch (_) {
       }
     }
