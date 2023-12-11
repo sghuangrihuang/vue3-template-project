@@ -11,7 +11,7 @@ const routes: RouterOptions['routes'] = [
   },
   {
     path: '/bugpage',
-    component: () => import('~/views/bug-page/index.vue'),
+    component: () => import('~/views/bug-page/index2.vue'),
   },
 ]
 
