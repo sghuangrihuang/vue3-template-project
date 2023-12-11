@@ -1,5 +1,6 @@
 <template>
-  <div class="bugpage">
+  <div class="app-container">
+    <router-view></router-view>
   </div>
 </template>
 
