@@ -31,7 +31,6 @@ class Request {
       (err: any) => err
     );
 
-    // 使用实例拦截器
     this.instance.interceptors.request.use(
       this.interceptorsObj?.requestInterceptors,
       this.interceptorsObj?.requestInterceptorsCatch
@@ -62,7 +61,6 @@ class Request {
           if (config.interceptors?.responseInterceptors) {
             res = config.interceptors.responseInterceptors(res);
           }
-
           resolve(res);
         })
         .catch((err: any) => {

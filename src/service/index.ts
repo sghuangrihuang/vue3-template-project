@@ -20,9 +20,7 @@ const request = new Request({
     // 请求拦截器
     requestInterceptors: config => config,
     // 响应拦截器
-    responseInterceptors: (result: AxiosResponse) => {
-      return result
-    },
+    responseInterceptors: (result: AxiosResponse) => result,
   },
 })
 
