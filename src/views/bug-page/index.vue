@@ -17,8 +17,8 @@
               <el-option v-for="item in ruleOption.priorityList" :key="item.label" :label="item.label" :value="item.value"></el-option>
             </el-select>
           </el-form-item>
-          <el-form-item label="所属系统" prop="systems">
-            <el-select v-model="ruleForm.systems" placeholder="请选择所属项目" clearable>
+          <el-form-item label="所属系统" prop="systemsValue">
+            <el-select v-model="ruleForm.systemsValue" placeholder="请选择所属项目" clearable>
             </el-select>
           </el-form-item>
           <el-form-item label="缺陷描述" prop="description">
@@ -74,8 +74,8 @@ const rules = reactive<FormRules>({
   priority: [
     { required: true, message: '请选择严重级别', trigger: 'change' }
   ],
-  systems: [
-    { required: true, message: '请选择执行人员', trigger: 'change' }
+  systemsValue: [
+    { required: true, message: '请选择所属系统', trigger: 'change' }
   ],
   description: [
     { required: true, message: '请输入缺陷描述', trigger: 'blur' }
