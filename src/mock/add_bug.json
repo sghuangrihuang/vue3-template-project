@@ -1,0 +1,1848 @@
+[
+    {
+        "id": 3,
+        "project_key": "642685e5130c94379f43c4af",
+        "work_item_id": "25303679",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "_field_linked_story",
+                "field_value": 21377981
+            },
+            {
+                "field_key": "bug_classification",
+                "field_value": {
+                    "label": "iOS",
+                    "value": "ios"
+                }
+            },
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-06T17:25:19.145009+08:00",
+        "update_time": "2023-12-06T17:25:19.145085+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 4,
+        "project_key": "642685e5130c94379f43c4af",
+        "work_item_id": "25330865",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "_field_linked_story",
+                "field_value": 21377981
+            },
+            {
+                "field_key": "bug_classification",
+                "field_value": {
+                    "label": "iOS",
+                    "value": "ios"
+                }
+            },
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-06T19:56:35.423018+08:00",
+        "update_time": "2023-12-06T19:56:35.423084+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 5,
+        "project_key": "642685e5130c94379f43c4af",
+        "work_item_id": "25477121",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "_field_linked_story",
+                "field_value": 21377981
+            },
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-07T17:39:27.026941+08:00",
+        "update_time": "2023-12-07T17:39:27.027053+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 6,
+        "project_key": "642685e5130c94379f43c4af",
+        "work_item_id": "25483717",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "_field_linked_story",
+                "field_value": 21377981
+            },
+            {
+                "field_key": "bug_classification",
+                "field_value": {
+                    "label": "iOS",
+                    "value": "ios"
+                }
+            },
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-07T18:24:40.372248+08:00",
+        "update_time": "2023-12-07T18:24:40.372328+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 7,
+        "project_key": "642685e5130c94379f43c4af",
+        "work_item_id": "25493108",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "_field_linked_story",
+                "field_value": 21377981
+            },
+            {
+                "field_key": "bug_classification",
+                "field_value": {
+                    "label": "iOS",
+                    "value": "ios"
+                }
+            },
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "CLOSED",
+        "create_time": "2023-12-07T19:01:00.971308+08:00",
+        "update_time": "2023-12-07T19:02:33.066044+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 8,
+        "project_key": "642685e5130c94379f43c4af",
+        "work_item_id": "25499433",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "description",
+                "field_value": [
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "meego111",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "type": "img",
+                                "attrs": {
+                                    "src": "https://project.feishu.cn/goapi/v1/tos/file/meego-business/checklist/a625928e-02fc-492d-bc44-b6f3b4c3bf63.jpg?isSaas=1"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "fff",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "field_key": "_field_linked_story",
+                "field_value": 21377981
+            },
+            {
+                "field_key": "bug_classification",
+                "field_value": {
+                    "label": "iOS",
+                    "value": "ios"
+                }
+            },
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-07T20:13:09.546158+08:00",
+        "update_time": "2023-12-07T20:13:09.546203+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 9,
+        "project_key": "642685e5130c94379f43c4af",
+        "work_item_id": "25557547",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "_field_linked_story",
+                "field_value": 21377981
+            },
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-08T11:11:08.737126+08:00",
+        "update_time": "2023-12-08T11:11:08.737164+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 10,
+        "project_key": "642685e5130c94379f43c4af",
+        "work_item_id": "25557594",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "_field_linked_story",
+                "field_value": 21377981
+            },
+            {
+                "field_key": "bug_classification",
+                "field_value": {
+                    "label": "iOS",
+                    "value": "ios"
+                }
+            },
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-08T11:11:31.355861+08:00",
+        "update_time": "2023-12-08T11:11:31.355917+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 11,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "25560758",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "field_e4d944",
+                "field_value": {
+                    "label": "游戏分发",
+                    "value": "wpuy0uu4o"
+                }
+            },
+            {
+                "field_key": "description",
+                "field_value": [
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "meego111",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "type": "img",
+                                "attrs": {
+                                    "src": "https://project.feishu.cn/goapi/v1/tos/file/meego-business/checklist/a625928e-02fc-492d-bc44-b6f3b4c3bf63.jpg?isSaas=1"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "fff",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0(致命)",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-08T11:29:01.902957+08:00",
+        "update_time": "2023-12-08T11:29:01.903010+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 12,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "25561733",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "field_e4d944",
+                "field_value": {
+                    "label": "游戏分发",
+                    "value": "wpuy0uu4o"
+                }
+            },
+            {
+                "field_key": "description",
+                "field_value": [
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "meego111",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "type": "img",
+                                "attrs": {
+                                    "src": "https://project.feishu.cn/goapi/v1/tos/file/meego-business/checklist/a625928e-02fc-492d-bc44-b6f3b4c3bf63.jpg?isSaas=1"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "fff",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0(致命)",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-08T11:31:21.792446+08:00",
+        "update_time": "2023-12-08T11:31:21.792493+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 13,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "25564850",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "watchers",
+                "field_value": [
+                    "7049746775208476700"
+                ]
+            },
+            {
+                "field_key": "field_e4d944",
+                "field_value": {
+                    "label": "游戏分发",
+                    "value": "wpuy0uu4o"
+                }
+            },
+            {
+                "field_key": "description",
+                "field_value": [
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "meego111",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "type": "img",
+                                "attrs": {
+                                    "src": "https://project.feishu.cn/goapi/v1/tos/file/meego-business/checklist/a625928e-02fc-492d-bc44-b6f3b4c3bf63.jpg?isSaas=1"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "fff",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0(致命)",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-08T11:44:59.703199+08:00",
+        "update_time": "2023-12-08T11:44:59.703265+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 14,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "25565965",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "role_owners",
+                "field_value": [
+                    {
+                        "role": "reporter",
+                        "owners": [
+                            "7246228106820730884"
+                        ],
+                        "role_key": "role_657286e1c2d1b3dd58406be7_issue_reporter"
+                    },
+                    {
+                        "role": "operator",
+                        "owners": [],
+                        "role_key": "role_657286e1c2d1b3dd58406be7_issue_operator"
+                    },
+                    {
+                        "role": "role_df2b93",
+                        "owners": [
+                            "7049746723794698242"
+                        ],
+                        "role_key": "role_657286e1c2d1b3dd58406be7_issue_role_df2b93"
+                    },
+                    {
+                        "role": "role_b4c256",
+                        "owners": [
+                            "7049746775208476700"
+                        ],
+                        "role_key": "role_657286e1c2d1b3dd58406be7_issue_role_b4c256"
+                    }
+                ]
+            },
+            {
+                "field_key": "field_e4d944",
+                "field_value": {
+                    "label": "游戏分发",
+                    "value": "wpuy0uu4o"
+                }
+            },
+            {
+                "field_key": "description",
+                "field_value": [
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "meego111",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "type": "img",
+                                "attrs": {
+                                    "src": "https://project.feishu.cn/goapi/v1/tos/file/meego-business/checklist/a625928e-02fc-492d-bc44-b6f3b4c3bf63.jpg?isSaas=1"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "fff",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0(致命)",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-08T11:53:47.448090+08:00",
+        "update_time": "2023-12-08T11:53:47.448167+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 15,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "25690078",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "role_owners",
+                "field_value": [
+                    {
+                        "role": "reporter",
+                        "owners": [
+                            "7246228106820730884"
+                        ],
+                        "role_key": "role_657286e1c2d1b3dd58406be7_issue_reporter"
+                    },
+                    {
+                        "role": "role_df2b93",
+                        "owners": [
+                            "7049746723794698242"
+                        ],
+                        "role_key": "role_657286e1c2d1b3dd58406be7_issue_role_df2b93"
+                    }
+                ]
+            },
+            {
+                "field_key": "field_e4d944",
+                "field_value": {
+                    "label": "游戏分发",
+                    "value": "wpuy0uu4o"
+                }
+            },
+            {
+                "field_key": "description",
+                "field_value": [
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "meego111",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "type": "img",
+                                "attrs": {
+                                    "src": "https://project.feishu.cn/goapi/v1/tos/file/meego-business/checklist/a625928e-02fc-492d-bc44-b6f3b4c3bf63.jpg?isSaas=1"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "fff",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0(致命)",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-09T14:36:43.526846+08:00",
+        "update_time": "2023-12-09T14:36:43.526846+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 16,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "25690217",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "role_owners",
+                "field_value": [
+                    {
+                        "role": "reporter",
+                        "owners": [
+                            "7246228106820730884"
+                        ],
+                        "role_key": "role_657286e1c2d1b3dd58406be7_issue_reporter"
+                    },
+                    {
+                        "role": "role_df2b93",
+                        "owners": [
+                            "7049746723794698242"
+                        ],
+                        "role_key": "role_657286e1c2d1b3dd58406be7_issue_role_df2b93"
+                    }
+                ]
+            },
+            {
+                "field_key": "field_e4d944",
+                "field_value": {
+                    "label": "游戏分发",
+                    "value": "wpuy0uu4o"
+                }
+            },
+            {
+                "field_key": "description",
+                "field_value": [
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "meego111",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "type": "img",
+                                "attrs": {
+                                    "src": "https://project.feishu.cn/goapi/v1/tos/file/meego-business/checklist/a625928e-02fc-492d-bc44-b6f3b4c3bf63.jpg?isSaas=1"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "fff",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0(致命)",
+                    "value": "0"
+                }
+            },
+            {
+                "field_key": "group_type",
+                "field_value": "auto"
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-09T14:44:26.238471+08:00",
+        "update_time": "2023-12-09T14:44:26.238471+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 17,
+        "project_key": "642685e5130c94379f43c4af",
+        "work_item_id": "25803378",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "_field_linked_story",
+                "field_value": 21377981
+            },
+            {
+                "field_key": "bug_classification",
+                "field_value": {
+                    "label": "iOS",
+                    "value": "ios"
+                }
+            },
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-11T10:00:11.282079+08:00",
+        "update_time": "2023-12-11T10:00:11.282124+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 18,
+        "project_key": "642685e5130c94379f43c4af",
+        "work_item_id": "25818079",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "_field_linked_story",
+                "field_value": 21377981
+            },
+            {
+                "field_key": "bug_classification",
+                "field_value": {
+                    "label": "iOS",
+                    "value": "ios"
+                }
+            },
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-11T11:18:24.954995+08:00",
+        "update_time": "2023-12-11T11:18:24.955049+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 19,
+        "project_key": "642685e5130c94379f43c4af",
+        "work_item_id": "25819513",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "_field_linked_story",
+                "field_value": 21377981
+            },
+            {
+                "field_key": "bug_classification",
+                "field_value": {
+                    "label": "iOS",
+                    "value": "ios"
+                }
+            },
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-11T11:26:08.457526+08:00",
+        "update_time": "2023-12-11T11:26:08.457610+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 20,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "25865303",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "role_owners",
+                "field_value": [
+                    {
+                        "role": "reporter",
+                        "owners": [
+                            "7246228106820730884"
+                        ],
+                        "role_key": "role_657286e1c2d1b3dd58406be7_issue_reporter"
+                    },
+                    {
+                        "role": "role_df2b93",
+                        "owners": [
+                            "7049746723794698242"
+                        ],
+                        "role_key": "role_657286e1c2d1b3dd58406be7_issue_role_df2b93"
+                    }
+                ]
+            },
+            {
+                "field_key": "field_e4d944",
+                "field_value": {
+                    "label": "游戏分发",
+                    "value": "wpuy0uu4o"
+                }
+            },
+            {
+                "field_key": "description",
+                "field_value": [
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "meego111",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "type": "img",
+                                "attrs": {
+                                    "src": "https://project.feishu.cn/goapi/v1/tos/file/meego-business/checklist/a625928e-02fc-492d-bc44-b6f3b4c3bf63.jpg?isSaas=1"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "fff",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0(致命)",
+                    "value": "0"
+                }
+            },
+            {
+                "field_key": "group_type",
+                "field_value": "auto"
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-11T16:25:04.673077+08:00",
+        "update_time": "2023-12-11T16:25:04.673160+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 21,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "25865354",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "role_owners",
+                "field_value": [
+                    {
+                        "role": "reporter",
+                        "owners": [
+                            "7246228106820730884"
+                        ],
+                        "role_key": "role_657286e1c2d1b3dd58406be7_issue_reporter"
+                    },
+                    {
+                        "role": "role_df2b93",
+                        "owners": [
+                            "7049746723794698242"
+                        ],
+                        "role_key": "role_657286e1c2d1b3dd58406be7_issue_role_df2b93"
+                    }
+                ]
+            },
+            {
+                "field_key": "field_e4d944",
+                "field_value": {
+                    "label": "游戏分发",
+                    "value": "wpuy0uu4o"
+                }
+            },
+            {
+                "field_key": "description",
+                "field_value": [
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "meego111",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "type": "img",
+                                "attrs": {
+                                    "src": "https://project.feishu.cn/goapi/v1/tos/file/meego-business/checklist/a625928e-02fc-492d-bc44-b6f3b4c3bf63.jpg?isSaas=1"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "fff",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0(致命)",
+                    "value": "0"
+                }
+            },
+            {
+                "field_key": "group_type",
+                "field_value": "auto"
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-11T16:25:52.364224+08:00",
+        "update_time": "2023-12-11T16:25:52.364224+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 22,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "26032926",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "_field_linked_story",
+                "field_value": 21377981
+            },
+            {
+                "field_key": "bug_classification",
+                "field_value": {
+                    "label": "iOS",
+                    "value": "ios"
+                }
+            },
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-12T16:45:28.174947+08:00",
+        "update_time": "2023-12-12T16:45:28.175003+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 23,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "26032930",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "_field_linked_story",
+                "field_value": 21377981
+            },
+            {
+                "field_key": "bug_classification",
+                "field_value": {
+                    "label": "iOS",
+                    "value": "ios"
+                }
+            },
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-12T16:45:34.249828+08:00",
+        "update_time": "2023-12-12T16:45:34.249864+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 24,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "26033011",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "_field_linked_story",
+                "field_value": 21377981
+            },
+            {
+                "field_key": "bug_classification",
+                "field_value": {
+                    "label": "iOS",
+                    "value": "ios"
+                }
+            },
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-12T16:46:15.792232+08:00",
+        "update_time": "2023-12-12T16:46:15.792321+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 25,
+        "project_key": "642685e5130c94379f43c4af",
+        "work_item_id": "26033037",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "_field_linked_story",
+                "field_value": 21377981
+            },
+            {
+                "field_key": "bug_classification",
+                "field_value": {
+                    "label": "iOS",
+                    "value": "ios"
+                }
+            },
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-12T16:46:25.700104+08:00",
+        "update_time": "2023-12-12T16:46:25.700217+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 26,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "26033075",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "_field_linked_story",
+                "field_value": 21377981
+            },
+            {
+                "field_key": "bug_classification",
+                "field_value": {
+                    "label": "iOS",
+                    "value": "ios"
+                }
+            },
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-12T16:46:38.610939+08:00",
+        "update_time": "2023-12-12T16:46:38.611006+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 27,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "26033186",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "_field_linked_story",
+                "field_value": 21377981
+            },
+            {
+                "field_key": "bug_classification",
+                "field_value": {
+                    "label": "iOS",
+                    "value": "ios"
+                }
+            },
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-12T16:47:36.634739+08:00",
+        "update_time": "2023-12-12T16:47:36.634792+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 28,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "26037149",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-12T17:17:40.205016+08:00",
+        "update_time": "2023-12-12T17:17:40.205074+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 29,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "26037333",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-12T17:18:51.877591+08:00",
+        "update_time": "2023-12-12T17:18:51.877682+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 30,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "26165681",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重级别",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            },
+            {
+                "field_key": "description",
+                "field_value": {
+                    "text": "meego111",
+                    "type": "text"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-13T15:02:32.048709+08:00",
+        "update_time": "2023-12-13T15:02:32.048779+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 31,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "26165861",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重级别",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            },
+            {
+                "field_key": "description",
+                "field_value": {
+                    "text": "我是描述",
+                    "type": "text"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-13T15:03:31.576290+08:00",
+        "update_time": "2023-12-13T15:03:31.576392+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 32,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "26166419",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "issue_stage",
+                "field_value": {
+                    "label": "UI/UE/PM验收",
+                    "value": "stage_verify"
+                }
+            },
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重级别",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            },
+            {
+                "field_key": "role_owners",
+                "field_value": [
+                    {
+                        "role": "reporter",
+                        "owners": [
+                            "7246228106820730884"
+                        ],
+                        "role_key": "role_657286e1c2d1b3dd58406be7_issue_reporter"
+                    }
+                ]
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-13T15:07:54.199910+08:00",
+        "update_time": "2023-12-13T15:07:54.200009+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 33,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "26172633",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重级别",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            },
+            {
+                "field_key": "description",
+                "field_value": [
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "我是描述",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-13T15:35:10.651188+08:00",
+        "update_time": "2023-12-13T15:35:10.651291+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 34,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "26181742",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重级别",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            },
+            {
+                "field_key": "description",
+                "field_value": [
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "我是描述",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-13T16:19:11.092874+08:00",
+        "update_time": "2023-12-13T16:19:11.092936+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 35,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "26182722",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "severity",
+                "field_value": {
+                    "label": "严重级别",
+                    "value": "1"
+                }
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0",
+                    "value": "0"
+                }
+            },
+            {
+                "field_key": "description",
+                "field_value": [
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "我是描述",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-13T16:25:36.430750+08:00",
+        "update_time": "2023-12-13T16:25:36.430830+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 36,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "26187461",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "role_owners",
+                "field_value": [
+                    {
+                        "role": "reporter",
+                        "owners": [
+                            "7246228106820730884"
+                        ],
+                        "role_key": "role_657286e1c2d1b3dd58406be7_issue_reporter"
+                    },
+                    {
+                        "role": "role_df2b93",
+                        "owners": [
+                            "7049746723794698242"
+                        ],
+                        "role_key": "role_657286e1c2d1b3dd58406be7_issue_role_df2b93"
+                    }
+                ]
+            },
+            {
+                "field_key": "field_e4d944",
+                "field_value": {
+                    "label": "游戏分发",
+                    "value": "wpuy0uu4o"
+                }
+            },
+            {
+                "field_key": "description",
+                "field_value": [
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "meego111",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "type": "img",
+                                "attrs": {
+                                    "src": "https://project.feishu.cn/goapi/v1/tos/file/meego-business/checklist/a625928e-02fc-492d-bc44-b6f3b4c3bf63.jpg?isSaas=1"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "fff",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0(致命)",
+                    "value": "0"
+                }
+            },
+            {
+                "field_key": "group_type",
+                "field_value": "auto"
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-13T16:38:32.593349+08:00",
+        "update_time": "2023-12-13T16:38:32.593391+08:00",
+        "user_id": 7
+    },
+    {
+        "id": 37,
+        "project_key": "657286e1c2d1b3dd58406be7",
+        "work_item_id": "26304447",
+        "miigo_user_key": "7246228106820730884",
+        "fields_data": [
+            {
+                "field_key": "role_owners",
+                "field_value": [
+                    {
+                        "role": "reporter",
+                        "owners": [
+                            "7246228106820730884"
+                        ],
+                        "role_key": "role_657286e1c2d1b3dd58406be7_issue_reporter"
+                    },
+                    {
+                        "role": "role_df2b93",
+                        "owners": [
+                            "7049746723794698242"
+                        ],
+                        "role_key": "role_657286e1c2d1b3dd58406be7_issue_role_df2b93"
+                    }
+                ]
+            },
+            {
+                "field_key": "field_e4d944",
+                "field_value": {
+                    "label": "游戏分发",
+                    "value": "wpuy0uu4o"
+                }
+            },
+            {
+                "field_key": "description",
+                "field_value": [
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "meego111",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "type": "img",
+                                "attrs": {
+                                    "src": "https://project.feishu.cn/goapi/v1/tos/file/meego-business/checklist/a625928e-02fc-492d-bc44-b6f3b4c3bf63.jpg?isSaas=1"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "text": "fff",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "field_key": "priority",
+                "field_value": {
+                    "label": "P0(致命)",
+                    "value": "0"
+                }
+            }
+        ],
+        "status": "OPEN",
+        "create_time": "2023-12-14T10:02:25.066917+08:00",
+        "update_time": "2023-12-14T10:06:40.770891+08:00",
+        "user_id": 7
+    }
+]
