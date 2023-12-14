@@ -98,7 +98,9 @@ const fetchLogin = async () => {
   }
 }
 
-fetchLogin()
+onMounted(() => {
+  fetchLogin()
+})
 
 </script>
 <style scoped lang="scss">

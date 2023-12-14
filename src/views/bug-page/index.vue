@@ -7,21 +7,14 @@
           <el-form-item label="缺陷标题" prop="name">
             <el-input v-model="ruleForm.name" placeholder="请输入缺陷标题" clearable></el-input>
           </el-form-item>
-          <el-form-item label="缺陷类型" prop="bugType">
-            <el-select v-model="ruleForm.bugType" placeholder="请选择缺陷类型" clearable>
-              <el-option label="普通缺陷" value="bugType1"></el-option>
-              <el-option label="线上缺陷" value="bugType2"></el-option>
-              <el-option label="产品设计缺陷" value="bugType3"></el-option>
-              <el-option label="业务反馈" value="bugType3"></el-option>
+          <el-form-item label="缺陷类型" prop="template_id">
+            <el-select v-model="ruleForm.template_id" placeholder="请选择缺陷类型" clearable>
+              <el-option v-for="item in ruleOption.templateList" :key="item.label" :label="item.label" :value="item.value"></el-option>
             </el-select>
           </el-form-item>
           <el-form-item label="严重级别" prop="priority">
             <el-select v-model="ruleForm.priority" placeholder="请选择严重级别" clearable>
-              <el-option label="P0致命" value="P0"></el-option>
-              <el-option label="P1严重" value="P1"></el-option>
-              <el-option label="P2一般" value="P2"></el-option>
-              <el-option label="P3轻微" value="P3"></el-option>
-              <el-option label="P4建议" value="P4"></el-option>
+              <el-option v-for="item in ruleOption.priorityList" :key="item.label" :label="item.label" :value="item.value"></el-option>
             </el-select>
           </el-form-item>
           <el-form-item label="所属系统" prop="systems">
@@ -44,14 +37,53 @@
 </template>
 
 <script lang="ts" setup>
+import { getWorkItemFields } from '~/api'
 import useUserStore from '~/store/modules/user';
 import BugFormData from './types/bug-from'
 import type { FormInstance, FormRules } from 'element-plus'
+import workItemFieldsJson from '~/mock/get_work_item_fields.json';
 const userStore = useUserStore()
 const ruleFormRef = ref<FormInstance>()
 const ruleForm = reactive<BugFormData>(
   new BugFormData()
 )
+
+const ruleOption = reactive({
+  systemList: [],
+  templateList: [
+    {
+      "label": "业务反馈",
+      "value": "572712"
+      },
+    {
+      "label": "客服反馈",
+      "value": "572713"
+    },
+  ],
+  priorityList: [],
+})
+
+// reactive<FormRules<RuleForm>>
+const rules = reactive<FormRules>({
+  name: [
+    { required: true, message: '请输入缺陷标题', trigger: 'blur' }
+  ],
+  template_id: [
+    { required: true, message: '请选择缺陷类型', trigger: 'change' }
+  ],
+  priority: [
+    { required: true, message: '请选择严重级别', trigger: 'change' }
+  ],
+  systems: [
+    { required: true, message: '请选择执行人员', trigger: 'change' }
+  ],
+  description: [
+    { required: true, message: '请输入缺陷描述', trigger: 'blur' }
+  ],
+  role_owners: [
+    { required: true, message: '请选择执行人员', trigger: 'change' }
+  ],
+})
 
 const submitForm = async (formEl: FormInstance | undefined) => {
   if (!formEl) return
@@ -69,26 +101,45 @@ const resetForm = (formEl: FormInstance | undefined) => {
   formEl.resetFields()
 }
 
-const rules = {
-  title: [
-    { required: true, message: '请输入缺陷标题', trigger: 'blur' }
-  ],
-  bugType: [
-    { required: true, message: '请选择缺陷类型', trigger: 'change' }
-  ],
-  priority: [
-    { required: true, message: '请选择严重级别', trigger: 'change' }
-  ],
-  systems: [
-    { required: true, message: '请选择执行人员', trigger: 'change' }
-  ],
-  description: [
-    { required: true, message: '请输入缺陷描述', trigger: 'blur' }
-  ],
-  role_owners: [
-    { required: true, message: '请选择执行人员', trigger: 'change' }
-  ],
+const fetchWorkFields = async () => {
+  let workFieldFields: any
+  try {
+    const res: any = await getWorkItemFields({
+      user_key: userStore.getUserKey,
+      project_key: ruleForm.project_key,
+      work_item_type_key: ruleForm.work_item_type_key,
+    })
+    workFieldFields = res
+  } catch (_) {
+    console.log('getWorkItemFields')
+    workFieldFields = workItemFieldsJson
+  } finally {
+    handleWorkFieldFields(workFieldFields)
+  }
 }
+
+const handleWorkFieldFields = (data: any) => {
+  try {
+    const form = data.work_item_fields.form
+    const formData = form && form[0]
+    const fieldValuePairs = formData && formData.data && formData.data.field_value_pairs
+    const fieldValuePair = fieldValuePairs && fieldValuePairs[0]
+    if (fieldValuePair) {
+      ruleOption.priorityList = fieldValuePair.priority.field_value
+      if (fieldValuePair.systems) {
+        const systemData = fieldValuePair.systems[0]
+        ruleForm.systems = systemData.field_key
+        ruleOption.systemList = systemData.field[0].options
+      }
+    }
+  } catch (_) {
+    console.log('handleWorkFieldFields', _)
+  }
+}
+
+onMounted(() => {
+  fetchWorkFields()
+})
 
 </script>
 <style scoped lang="scss">
