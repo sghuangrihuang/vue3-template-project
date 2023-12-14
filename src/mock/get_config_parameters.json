@@ -1,0 +1,7 @@
+{
+    "appid": "cli_a5df1565a0ba500c",
+    "signature": "0e5f988249e3afc72cc6dc116ebfa88fded3595e",
+    "noncestr": "npoJB44dq0v5LkzA5tjhnZWCPR3geeE7",
+    "timestamp": 1702521077000,
+    "Authorization_url": "https://passport.feishu.cn/accounts/page/login?app_id=12&authz_context=CcQfnlFj7Tk5r9dgWxaYwkMjjh2bCqhJKIEguMXCzC2C6rx2%2BEfHXu90O3bL1ZWd&biz_type=authz&force_login=true&redirect_uri=https%3A%2F%2Fpassport.feishu.cn%2Faccounts%2Fauth_login%2Foauth2%2Fauthorize%3Fapp_id%3D4e11974c58ae389b%26authz_context%3DCcQfnlFj7Tk5r9dgWxaYwkMjjh2bCqhJKIEguMXCzC2C6rx2%252BEfHXu90O3bL1ZWd%26desc%3D%257B%2522default%2522%253A%2522%25E6%25B5%258B%25E8%25AF%2595%25E7%2589%2588-%25E9%2597%25AE%25E9%25A2%2598%25E5%258D%2595%2522%252C%2522en-US%2522%253A%2522%25E6%25B5%258B%25E8%25AF%2595%25E7%2589%2588-%25E9%2597%25AE%25E9%25A2%2598%25E5%258D%2595%2522%252C%2522ja-JP%2522%253A%2522%25E6%25B5%258B%25E8%25AF%2595%25E7%2589%2588-%25E9%2597%25AE%25E9%25A2%2598%25E5%258D%2595%2522%252C%2522zh-CN%2522%253A%2522%25E6%25B5%258B%25E8%25AF%2595%25E7%2589%2588-%25E9%2597%25AE%25E9%25A2%2598%25E5%258D%2595%2522%257D%26redirect_uri%3Dhttps%253A%252F%252Fopen.feishu.cn%252Fopen-apis%252Fauthen%252Fv1%252Fauthen_pc%253Fapp_id%253Dcli_a5df1565a0ba500c%2526redirect_uri%253Dhttp%25253A%25252F%25252Fdev-qa-feishu-ticket.ewan.cn%25252Fuser%25252Fget_login_code%25252F%2526response_type%253Dcode%2526state%253D%26response_type%3Dtoken%26sign%3D5787c254fd15fea80f00fca7f8db59ce0f0ae87077d2f2bd7d5eb0fd2db2366c%26state%3D77b99424-4c20-42c8-9620-ec6587c4a4a8"
+}

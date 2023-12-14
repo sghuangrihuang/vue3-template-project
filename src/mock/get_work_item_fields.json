@@ -1,0 +1,265 @@
+{
+    "work_item_fields": {
+        "form": [
+            {
+                "name": "xxx",
+                "user_key": "xxx",
+                "space_key": "xxx",
+                "data": {
+                    "work_item_type_key": "xxx",
+                    "template_id": "572712",
+                    "name": "xxx",
+                    "project_key": "xxxx",
+                    "field_value_pairs": [
+                        {
+                            "systems": [
+                                {
+                                    "field_name": "所属系统",
+                                    "'field_key'": "field_e4d944",
+                                    "field": [
+                                        {
+                                            "options": [
+                                                {
+                                                    "value": "_5vurvukb",
+                                                    "label": "运营发行系统",
+                                                    "tester": "信太阳",
+                                                    "avatar_url": "https://s3-fs.pstatp.com/static-resource/v1/v3_005d_ada2cb99-2ebf-4857-9479-129de858dbeg~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+                                                    "user_key": "7049746723794698242",
+                                                    "children": [
+                                                        {
+                                                            "label": "游戏分发",
+                                                            "value": "wpuy0uu4o"
+                                                        },
+                                                        {
+                                                            "label": "基础天眼益玩",
+                                                            "value": "symj2noy4"
+                                                        },
+                                                        {
+                                                            "label": "基础天眼联三",
+                                                            "value": "ad7i1xmxp"
+                                                        },
+                                                        {
+                                                            "label": "联运平台",
+                                                            "value": "wegystmw3"
+                                                        },
+                                                        {
+                                                            "label": "CP服务平台",
+                                                            "value": "4kn491oi7"
+                                                        },
+                                                        {
+                                                            "label": "海外超级/网游后台",
+                                                            "value": "h1025ygp8"
+                                                        },
+                                                        {
+                                                            "label": "智能客服后台",
+                                                            "value": "jymv0jfgn"
+                                                        },
+                                                        {
+                                                            "label": "礼包商城",
+                                                            "value": "e9jpl91f_"
+                                                        },
+                                                        {
+                                                            "label": "游戏论坛",
+                                                            "value": "x4ostbfof"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "value": "7bobmmzql",
+                                                    "label": "数据中台系统",
+                                                    "tester": "阿福",
+                                                    "avatar_url": "https://s3-fs.pstatp.com/static-resource/v1/v2_26034395-224c-4b92-acf7-767bf145c22g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+                                                    "user_key": "7049746723794714626",
+                                                    "children": [
+                                                        {
+                                                            "label": "数据中台权限系统",
+                                                            "value": "dvaei4v0n"
+                                                        },
+                                                        {
+                                                            "label": "数据埋点管理平台",
+                                                            "value": "8wkcma78c"
+                                                        },
+                                                        {
+                                                            "label": "通用报表配置平台",
+                                                            "value": "f2sv2030i"
+                                                        },
+                                                        {
+                                                            "label": "运营数据平台",
+                                                            "value": "xuccmjvvn"
+                                                        },
+                                                        {
+                                                            "label": "游戏分析平台",
+                                                            "value": "mwmc5p69f"
+                                                        },
+                                                        {
+                                                            "label": "财务结算平台",
+                                                            "value": "x42c1ajg9"
+                                                        },
+                                                        {
+                                                            "label": "数数后台",
+                                                            "value": "0w8jwy2q4"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "value": "o_4ib8z20",
+                                                    "label": "信息化平台系统",
+                                                    "tester": "大凯凯",
+                                                    "avatar_url": "https://s3-fs.pstatp.com/static-resource/v1/v3_0050_074bc548-1c03-4a83-9da7-7265cec686dg~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+                                                    "user_key": "7163907715037773852",
+                                                    "children": [
+                                                        {
+                                                            "label": "OA平台",
+                                                            "value": "6m4cdt99u"
+                                                        },
+                                                        {
+                                                            "label": "联三OA",
+                                                            "value": "gb6hht5ne"
+                                                        },
+                                                        {
+                                                            "label": "4A管理平台",
+                                                            "value": "fqxadhvwf"
+                                                        },
+                                                        {
+                                                            "label": "SRM后台",
+                                                            "value": "gnz8cus25"
+                                                        },
+                                                        {
+                                                            "label": "FMS后台",
+                                                            "value": "67wb3bnqj"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "value": "h31l7q8_c",
+                                                    "label": "游戏问题",
+                                                    "tester": "加四",
+                                                    "avatar_url": "https://s3-fs.pstatp.com/static-resource/v1/v3_005j_1f862969-258f-43df-9de7-1fecf0057ceg~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+                                                    "user_key": "7222040588793806850",
+                                                    "children": [
+                                                        {
+                                                            "label": "游戏登录问题",
+                                                            "value": "6nb5a29f0"
+                                                        },
+                                                        {
+                                                            "label": "游戏实名问题",
+                                                            "value": "868tg2_pv"
+                                                        },
+                                                        {
+                                                            "label": "游戏注册问题",
+                                                            "value": "plhpw2m8h"
+                                                        },
+                                                        {
+                                                            "label": "游戏支付问题",
+                                                            "value": "7lre3w3i8"
+                                                        },
+                                                        {
+                                                            "label": "游戏其它问题",
+                                                            "value": "8gcnws68s"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "value": "c1wnzarmp",
+                                                    "label": "投放数据平台",
+                                                    "tester": "小当家",
+                                                    "avatar_url": "https://s3-fs.pstatp.com/static-resource/v1/v2_d319aebd-c9c5-47cf-bbbe-2a25c270038g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+                                                    "user_key": "7049746714885947420",
+                                                    "children": [
+                                                        {
+                                                            "label": "国内投放",
+                                                            "value": "5x6o9xhbh"
+                                                        },
+                                                        {
+                                                            "label": "海外投放",
+                                                            "value": "_gibl4auz"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "value": "o98wxesq1",
+                                                    "label": "其它",
+                                                    "tester": "俊威",
+                                                    "avatar_url": "https://s3-fs.pstatp.com/static-resource/v1/v2_2c307e83-aebc-4df5-8108-28eb56a8b3fg~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+                                                    "user_key": "7049746775208476700",
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "desc": {
+                                "field_key": "description",
+                                "field_value": [
+                                    {
+                                        "type": "paragraph",
+                                        "content": [
+                                            {
+                                                "type": "text",
+                                                "text": "meego111"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "role": [
+                                {
+                                    "field_key": "role_owners",
+                                    "field_value": [
+                                        {
+                                            "role": "reporter",
+                                            "owners": [
+                                                "7246228106820730884"
+                                            ],
+                                            "role_key": "role_657286e1c2d1b3dd58406be7_issue_reporter"
+                                        },
+                                        {
+                                            "role": "role_df2b93",
+                                            "owners": [
+                                                "7049746723794698242"
+                                            ],
+                                            "role_key": "role_657286e1c2d1b3dd58406be7_issue_role_df2b93"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "priority": {
+                                "field_key": "priority",
+                                "field_value": [
+                                    {
+                                        "label": "P0(致命)",
+                                        "value": "0"
+                                    },
+                                    {
+                                        "label": "P1(严重)",
+                                        "value": "1"
+                                    },
+                                    {
+                                        "label": "P2(一般)",
+                                        "value": "2"
+                                    },
+                                    {
+                                        "label": "P3(轻微)",
+                                        "value": "99"
+                                    },
+                                    {
+                                        "label": "P4(建议类)",
+                                        "value": "c_0c3dyo3"
+                                    }
+                                ]
+                            },
+                            "group": {
+                                "field_key": "group_type",
+                                "field_value": [
+                                    "auto",
+                                    null
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

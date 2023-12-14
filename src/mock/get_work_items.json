@@ -1,0 +1,64 @@
+{
+    "work_items": [
+        {
+            "is_disable": 2,
+            "api_name": "story",
+            "type_key": "story",
+            "name": "需求"
+        },
+        {
+            "type_key": "issue",
+            "name": "缺陷",
+            "is_disable": 2,
+            "api_name": "issue"
+        },
+        {
+            "type_key": "version",
+            "name": "版本",
+            "is_disable": 2,
+            "api_name": "version"
+        },
+        {
+            "api_name": "sprint",
+            "type_key": "sprint",
+            "name": "迭代",
+            "is_disable": 2
+        },
+        {
+            "name": "图表",
+            "is_disable": 2,
+            "api_name": "chart",
+            "type_key": "chart"
+        },
+        {
+            "type_key": "64268687e84f2ff502632c71",
+            "name": "节点",
+            "is_disable": 2,
+            "api_name": "node"
+        },
+        {
+            "api_name": "pro",
+            "type_key": "642b9cc72215856e950fada0",
+            "name": "弃用",
+            "is_disable": 2
+        },
+        {
+            "type_key": "64afc4c4249370d94be7d2d2",
+            "name": "项目",
+            "is_disable": 2,
+            "api_name": "project"
+        },
+        {
+            "api_name": "qingdan",
+            "type_key": "64db417b9b3e2e3d7b235e39",
+            "name": "清单",
+            "is_disable": 2
+        },
+        {
+            "type_key": "6571303de94bd7a8e15ec242",
+            "name": "es测试",
+            "is_disable": 2,
+            "api_name": "estest"
+        }
+    ]
+}
