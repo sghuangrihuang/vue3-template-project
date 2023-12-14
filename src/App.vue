@@ -3,7 +3,6 @@
 </template>
 
 <script lang="ts" setup>
-import { storeToRefs } from 'pinia'
 import { getConfigParameters, getUserInfo, getConsumnerUserKey } from '~/api'
 import TTUserInfo from '~/utils/types/tt-user-info'
 import UserInfo from '~/utils/types/user-info'
@@ -47,7 +46,7 @@ const handleUserInfo = (userList: UserInfo[]) => {
 const fetchUserInfo = async (ttUserInfo: TTUserInfo) => {
 
   try {
-    const userList: UserInfo[] = await getUserInfo({
+    const userList: any = await getUserInfo({
       name: ttUserInfo.nickName,
     })
     handleUserInfo(userList)
@@ -60,6 +59,7 @@ const fetchUserInfo = async (ttUserInfo: TTUserInfo) => {
 const handleTTUserInfo = (res: any) => {
   if (res.errMsg === 'getUserInfo:ok') {
     const ttUserInfo = new TTUserInfo(res.userInfo)
+    ttUserInfo.nickName = ttUserInfo.nickName === '张三' ?  '弗拉格' : ttUserInfo.nickName
     ttuserStore.$patch(ttUserInfo)
     fetchUserInfo(ttUserInfo)
   }
@@ -89,7 +89,7 @@ const fetchLogin = async () => {
       })
       },
       onFail: (error: any) => {
-        console.log('h5sdk', '鉴权异常')
+        console.log('h5sdk', '鉴权异常', error)
       }
     });
   } catch (_) {
