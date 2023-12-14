@@ -159,6 +159,10 @@ const fetchSumbitData = async () => {
               label: ruleForm.priorityLabel,
               value: ruleForm.priority
             }
+          },
+          {
+            field_key: ruleForm.systems,
+            field_value: ruleForm.systemsValue
           }
         ]
       }
