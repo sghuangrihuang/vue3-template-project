@@ -33,6 +33,14 @@ export const getSpaceList = (data: IGetUserKey) => {
   })
 }
 
+export const getAddBugList = (data: IGetName) => {
+  return request<IGetName>({
+    url: '/add_bug',
+    method: 'GET',
+    data
+  })
+}
+
 export const getSpaceDetail = (data: IGetSpaceKey) => {
   return request<IGetSpaceKey>({
     url: '/add_bug/get_space_detail',
