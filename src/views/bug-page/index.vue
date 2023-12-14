@@ -24,7 +24,7 @@
               <el-option label="P4建议" value="P4"></el-option>
             </el-select>
           </el-form-item>
-          <el-form-item label="所属项目" prop="severity">
+          <el-form-item label="所属系统" prop="severity">
             <el-select v-model="ruleForm.project" placeholder="请选择所属项目" clearable>
               <el-option label="项目1" value="project1"></el-option>
               <el-option label="项目1" value="project2"></el-option>
@@ -41,12 +41,7 @@
               <div class="el-upload__tip">只能上传jpg/png文件</div>
             </el-upload>
           </el-form-item> -->
-          <el-form-item label="执行人员" prop="role_owners">
-            <el-select v-model="ruleForm.role_owners" placeholder="请选择执行人员" clearable>
-              <el-option label="Assignee 1" value="assignee1"></el-option>
-              <el-option label="Assignee 2" value="assignee2"></el-option>
-              <el-option label="Assignee 3" value="assignee3"></el-option>
-            </el-select>
+          <el-form-item label="测试人员" prop="role_owners">
           </el-form-item>
           <el-form-item>
             <el-button type="primary" @click="submitForm('ruleFormRef')">提交</el-button>
