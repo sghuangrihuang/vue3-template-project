@@ -6,12 +6,12 @@ const routes: RouterOptions['routes'] = [
     redirect: '/bugpage'
   },
   {
-    path: '/homepage',
-    component: () => import('~/views/homepage/index.vue'),
-  },
-  {
     path: '/bugpage',
     component: () => import('~/views/bug-page/index.vue'),
+  },
+  {
+    path: '/buglist',
+    component: () => import('~/views/bug-list/index.vue'),
   },
 ]
 
