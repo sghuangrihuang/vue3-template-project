@@ -21,7 +21,6 @@ export default ({ mode }) => {
       'process.env': viteEnv
     },
     server: {
-      host: '172.16.10.126',
       port: 8080,
       proxy: {
         [viteEnv.VITE_APP_BASE_API]: {

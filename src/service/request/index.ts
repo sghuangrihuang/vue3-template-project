@@ -61,6 +61,10 @@ class Request {
           if (config.interceptors?.responseInterceptors) {
             res = config.interceptors.responseInterceptors(res);
           }
+          // @ts-ignore
+          if (res.code === 'ERR_NETWORK') {
+            return reject(res)
+          }
           resolve(res);
         })
         .catch((err: any) => {
