@@ -72,7 +72,8 @@ const ruleOption = reactive<{
   systemList: any[],
   templateList: any[],
   priorityList: any[],
-  roleList: any[]
+  roleList: any[],
+  role_owners: any[]
 }>({
   systemList: [],
   templateList: [
@@ -86,7 +87,8 @@ const ruleOption = reactive<{
     },
   ],
   priorityList: [],
-  roleList: []
+  roleList: [],
+  role_owners: []
 })
 
 // reactive<FormRules<RuleForm>>
@@ -149,7 +151,7 @@ const fetchSumbitData = async () => {
           },
           {
             field_key: "role_owners",
-            field_value: []
+            field_value: ruleOption.role_owners
           },
           {
             field_key: "priority",
@@ -218,6 +220,7 @@ const handleWorkFieldFields = (data: any) => {
     const fieldValuePair = fieldValuePairs && fieldValuePairs[0]
     if (fieldValuePair) {
       ruleOption.priorityList = fieldValuePair.priority.field_value
+      ruleOption.role_owners = fieldValuePair.role
       if (fieldValuePair.systems) {
         const systemData = fieldValuePair.systems[0]
         ruleForm.systems = systemData.field_key
@@ -226,7 +229,6 @@ const handleWorkFieldFields = (data: any) => {
           item.valueList = item.children.map((child: any) => child.value)
           return item
         })
-        console.log(ruleOption.roleList)
       }
     }
   } catch (_) {
