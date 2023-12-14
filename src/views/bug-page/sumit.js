@@ -8,7 +8,7 @@ const data = {
     name: "接口测试提交的状态2323",
     project_key: "657286e1c2d1b3dd58406be7",
     field_value_pairs: [
-      // 负责人
+      // 测试人员
       {
         field_key: "role_owners",
         field_value: [
@@ -71,7 +71,7 @@ const data = {
           },
         ],
       },
-      // priority
+      // 严重级别
       {
         field_key: "priority",
         field_value: {

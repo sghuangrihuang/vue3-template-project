@@ -7,6 +7,8 @@ export default class BugFormData {
   public description: string = ''
   public group_type: string = 'auto'
   public priority: string = ''
+  public systems: string = ''
+  public systemsValue: string = ''
 
   constructor(params?: { [k in keyof Partial<BugFormData>]: BugFormData[k] }) {
     if (!params) {

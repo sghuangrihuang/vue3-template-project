@@ -3,7 +3,7 @@
     <div class="bugpage-container">
       <div class="content">
         <h1 class="header">缺陷提交表单</h1>
-        <el-form :model="ruleForm" :rules="rules" ref="ruleFormRef" label-width="100px" @submit.prevent.stop>
+        <el-form :model="ruleForm" :rules="rules" ref="ruleFormRef" label-position="top" @submit.prevent.stop>
           <el-form-item label="缺陷标题" prop="name">
             <el-input v-model="ruleForm.name" placeholder="请输入缺陷标题" clearable></el-input>
           </el-form-item>
@@ -15,8 +15,8 @@
               <el-option label="业务反馈" value="bugType3"></el-option>
             </el-select>
           </el-form-item>
-          <el-form-item label="严重级别" prop="severity">
-            <el-select v-model="ruleForm.severity" placeholder="请选择严重级别" clearable>
+          <el-form-item label="严重级别" prop="priority">
+            <el-select v-model="ruleForm.priority" placeholder="请选择严重级别" clearable>
               <el-option label="P0致命" value="P0"></el-option>
               <el-option label="P1严重" value="P1"></el-option>
               <el-option label="P2一般" value="P2"></el-option>
@@ -24,23 +24,13 @@
               <el-option label="P4建议" value="P4"></el-option>
             </el-select>
           </el-form-item>
-          <el-form-item label="所属系统" prop="severity">
-            <el-select v-model="ruleForm.project" placeholder="请选择所属项目" clearable>
-              <el-option label="项目1" value="project1"></el-option>
-              <el-option label="项目1" value="project2"></el-option>
-              <el-option label="项目1" value="project3"></el-option>
+          <el-form-item label="所属系统" prop="systems">
+            <el-select v-model="ruleForm.systems" placeholder="请选择所属项目" clearable>
             </el-select>
           </el-form-item>
           <el-form-item label="缺陷描述" prop="description">
             <el-input type="textarea" v-model="ruleForm.description" placeholder="请输入缺陷描述" :rows="8" clearable></el-input>
           </el-form-item>
-          <!-- <el-form-item label="附件上传" prop="attachment">
-            <el-upload class="upload-drag-area" drag multiple>
-              <i class="el-icon-upload"></i>
-              <div class="el-upload__text">将文件拖到此处，或<em> 点击上传</em></div>
-              <div class="el-upload__tip">只能上传jpg/png文件</div>
-            </el-upload>
-          </el-form-item> -->
           <el-form-item label="测试人员" prop="role_owners">
           </el-form-item>
           <el-form-item>
@@ -86,8 +76,11 @@ const rules = {
   bugType: [
     { required: true, message: '请选择缺陷类型', trigger: 'change' }
   ],
-  severity: [
+  priority: [
     { required: true, message: '请选择严重级别', trigger: 'change' }
+  ],
+  systems: [
+    { required: true, message: '请选择执行人员', trigger: 'change' }
   ],
   description: [
     { required: true, message: '请输入缺陷描述', trigger: 'blur' }
@@ -96,6 +89,7 @@ const rules = {
     { required: true, message: '请选择执行人员', trigger: 'change' }
   ],
 }
+
 </script>
 <style scoped lang="scss">
 .bugpage {
