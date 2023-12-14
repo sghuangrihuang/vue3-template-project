@@ -7,6 +7,7 @@ export default class BugFormData {
   public description: string = ''
   public group_type: string = 'auto'
   public priority: string = ''
+  public priorityLabel: string = ''
   public systems: string = ''
   public systemsValue: string = ''
 

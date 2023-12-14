@@ -13,7 +13,7 @@
             </el-select>
           </el-form-item>
           <el-form-item label="严重级别" prop="priority">
-            <el-select v-model="ruleForm.priority" placeholder="请选择严重级别" style="width: 100%;" clearable>
+            <el-select v-model="ruleForm.priority" placeholder="请选择严重级别" style="width: 100%;" clearable @change="onPriorityChange">
               <el-option v-for="item in ruleOption.priorityList" :key="item.label" :label="item.label" :value="item.value"></el-option>
             </el-select>
           </el-form-item>
@@ -55,11 +55,13 @@
 </template>
 
 <script lang="ts" setup>
-import { getWorkItemFields } from '~/api'
+import { getWorkItemFields, createWordItem } from '~/api'
 import useUserStore from '~/store/modules/user';
 import BugFormData from './types/bug-from'
 import type { FormInstance, FormRules } from 'element-plus'
 import workItemFieldsJson from '~/mock/get_work_item_fields.json';
+import { ElMessage } from 'element-plus'
+const $router = useRouter();
 const userStore = useUserStore()
 const ruleFormRef = ref<FormInstance>()
 const ruleForm = reactive<BugFormData>(
@@ -109,13 +111,67 @@ const rules = reactive<FormRules>({
   ],
 })
 
+const routerToAddBugList = () => {
+  $router.push({
+    path: 'buglist'
+  })
+}
+
+const fetchSumbitData = async () => {
+  try {
+    await createWordItem({
+      name: userStore.getName,
+      user_key: userStore.getUserKey,
+      space_key: import.meta.env.VITE_APP_PROJRECT_KEY,
+      data: {
+        work_item_type_key: ruleForm.work_item_type_key,
+        template_id: ruleForm.template_id,
+        name: ruleForm.name,
+        project_key: ruleForm.project_key,
+        field_value_pairs: [
+          {
+            field_key: "description",
+            field_value: [
+              {
+                type: "paragraph",
+                content: [
+                  {
+                    type: "text",
+                    text: ruleForm.description,
+                  }
+                ]
+              },
+            ]
+          },
+          {
+            field_key: "group_type",
+            field_value: ruleForm.group_type
+          },
+          {
+            field_key: "role_owners",
+            field_value: []
+          },
+          {
+            field_key: "priority",
+            field_value: {
+              label: ruleForm.priorityLabel,
+              value: ruleForm.priority
+            }
+          }
+        ]
+      }
+    })
+    ElMessage.success('提交成功')
+    routerToAddBugList()
+  } catch (_) {
+  }
+}
+
 const handleSubmitForm = async (formEl: FormInstance | undefined) => {
   if (!formEl) return
   await formEl.validate((valid, fields) => {
     if (valid) {
-      console.log('submit!')
-    } else {
-      console.log('error submit!', fields)
+      fetchSumbitData()
     }
   })
 }
@@ -140,6 +196,11 @@ const fetchWorkFields = async () => {
   } finally {
     handleWorkFieldFields(workFieldFields)
   }
+}
+
+const onPriorityChange = (val) => {
+  const findItem = ruleOption.priorityList.find(item => item.value === val)
+  ruleForm.priorityLabel = findItem && findItem.label || ''
 }
 
 const onSystemsValueChange = (val) => {
