@@ -1,0 +1,18 @@
+{
+    "userInfo": {
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/3ebc23ab-6f45-4352-850f-852e64e07f0g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+        "city": "武汉",
+        "country": "CN",
+        "gender": "male",
+        "i18nName": {
+            "en_us": "San Zhang",
+            "ja_jp": "",
+            "zh_cn": ""
+        },
+        "language": "",
+        "nickName": "张三",
+        "province": ""
+    },
+    "rawData": "{\"nickName\":\"张三\",\"avatarUrl\":\"https://s1-imfile.feishucdn.com/static-resource/v1/3ebc23ab-6f45-4352-850f-852e64e07f0g~?image_size=72x72\\u0026cut_type=\\u0026quality=\\u0026format=png\\u0026sticker_format=.webp\",\"gender\":\"male\",\"city\":\"武汉\",\"province\":\"\",\"country\":\"CN\",\"language\":\"\",\"i18nName\":{\"en_us\":\"San Zhang\",\"ja_jp\":\"\",\"zh_cn\":\"\"}}",
+    "errMsg": "getUserInfo:ok"
+}
