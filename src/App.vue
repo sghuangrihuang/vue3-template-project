@@ -6,14 +6,13 @@
 import { getConfigParameters } from './api'
 
 const userInfo = () => {
+  // @ts-ignore
   window.h5sdk.ready(() => {
     // @ts-ignore
     tt.getUserInfo({
-      success(res) {
+      success(res: any) {
         console.log(res)
-      },
-      fail(err) {
-      },
+      }
     });
   })
 }
@@ -21,7 +20,7 @@ const userInfo = () => {
 const login = async () => {
   try {
     const url = location.href.split("#")[0]
-    const res = await getConfigParameters({
+    const res: any = await getConfigParameters({
       url
     })
     // @ts-ignore
@@ -30,11 +29,9 @@ const login = async () => {
       timestamp: res.timestamp,
       nonceStr: res.noncestr,
       signature: res.signature,
-      onSuccess: res => {
+      onSuccess: (_: any) => {
         userInfo()
-      },
-      onFail: err => {
-      },
+      }
     });
   } catch (_) {
   }
