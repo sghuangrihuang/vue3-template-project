@@ -8,17 +8,17 @@
             <el-input v-model="ruleForm.name" placeholder="请输入缺陷标题" clearable></el-input>
           </el-form-item>
           <el-form-item label="缺陷类型" prop="template_id">
-            <el-select v-model="ruleForm.template_id" placeholder="请选择缺陷类型" clearable>
+            <el-select v-model="ruleForm.template_id" placeholder="请选择缺陷类型" style="width: 100%;" clearable>
               <el-option v-for="item in ruleOption.templateList" :key="item.label" :label="item.label" :value="item.value"></el-option>
             </el-select>
           </el-form-item>
           <el-form-item label="严重级别" prop="priority">
-            <el-select v-model="ruleForm.priority" placeholder="请选择严重级别" clearable>
+            <el-select v-model="ruleForm.priority" placeholder="请选择严重级别" style="width: 100%;" clearable>
               <el-option v-for="item in ruleOption.priorityList" :key="item.label" :label="item.label" :value="item.value"></el-option>
             </el-select>
           </el-form-item>
           <el-form-item label="所属系统" prop="systemsValue">
-            <el-select v-model="ruleForm.systemsValue" placeholder="请选择所属项目" clearable>
+            <el-select v-model="ruleForm.systemsValue" placeholder="请选择所属项目" style="width: 100%;" clearable>
             </el-select>
           </el-form-item>
           <el-form-item label="缺陷描述" prop="description">
@@ -27,8 +27,8 @@
           <el-form-item label="测试人员" prop="role_owners">
           </el-form-item>
           <el-form-item>
-            <el-button type="primary" @click="submitForm('ruleFormRef')">提交</el-button>
-            <el-button @click="resetForm('ruleFormRef')">重置</el-button>
+            <el-button type="primary" @click="submitForm(ruleFormRef)">提交</el-button>
+            <el-button @click="resetForm(ruleFormRef)">重置</el-button>
           </el-form-item>
         </el-form>
       </div>
