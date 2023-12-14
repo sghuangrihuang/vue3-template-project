@@ -18,7 +18,6 @@ import { getAddBugList } from '~/api'
 import useUserStore from '~/store/modules/user';
 import addBugJson from '~/mock/add_bug.json'
 const userStore = useUserStore()
-// userStore.getName
 
 const form = reactive<{
   addBugList: any[]

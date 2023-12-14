@@ -1,5 +1,7 @@
 <template>
-  <router-view></router-view>
+  <template v-if="userStore.getUserKey">
+    <router-view></router-view>
+  </template>
 </template>
 
 <script lang="ts" setup>
