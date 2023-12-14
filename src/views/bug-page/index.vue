@@ -151,7 +151,13 @@ const fetchSumbitData = async () => {
           },
           {
             field_key: "role_owners",
-            field_value: ruleOption.role_owners
+            field_value: ruleForm.role_owners.map(item => {
+              return {
+                role: "reporter",
+                owners: [item.user_key],
+                role_key: `${item.value}_${item.user_key}`,
+              }
+            })
           },
           {
             field_key: "priority",
@@ -214,6 +220,7 @@ const onSystemsValueChange = (val) => {
   if (findItem) {
     ruleForm.role_owners = [findItem]
   }
+  console.log(ruleForm.role_owners)
 }
 
 const handleWorkFieldFields = (data: any) => {
@@ -224,7 +231,7 @@ const handleWorkFieldFields = (data: any) => {
     const fieldValuePair = fieldValuePairs && fieldValuePairs[0]
     if (fieldValuePair) {
       ruleOption.priorityList = fieldValuePair.priority.field_value
-      ruleOption.role_owners = fieldValuePair.role
+      // ruleOption.role_owners = fieldValuePair.role
       if (fieldValuePair.systems) {
         const systemData = fieldValuePair.systems[0]
         ruleForm.systems = systemData.field_key
