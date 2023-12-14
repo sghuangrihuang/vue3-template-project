@@ -3,12 +3,12 @@
     <div class="bugpage-container">
       <div class="content">
         <h1 class="header">缺陷提交表单</h1>
-        <el-form :model="bugForm" :rules="rules" ref="bugForm" label-width="100px" @submit.prevent.stop>
+        <el-form :model="ruleForm" :rules="rules" ref="ruleFormRef" label-width="100px" @submit.prevent.stop>
           <el-form-item label="缺陷标题" prop="title">
-            <el-input v-model="bugForm.title" placeholder="请输入缺陷标题" clearable></el-input>
+            <el-input v-model="ruleForm.title" placeholder="请输入缺陷标题" clearable></el-input>
           </el-form-item>
           <el-form-item label="缺陷类型" prop="bugType">
-            <el-select v-model="bugForm.bugType" placeholder="请选择缺陷类型" clearable>
+            <el-select v-model="ruleForm.bugType" placeholder="请选择缺陷类型" clearable>
               <el-option label="普通缺陷" value="bugType1"></el-option>
               <el-option label="线上缺陷" value="bugType2"></el-option>
               <el-option label="产品设计缺陷" value="bugType3"></el-option>
@@ -16,7 +16,7 @@
             </el-select>
           </el-form-item>
           <el-form-item label="严重级别" prop="severity">
-            <el-select v-model="bugForm.severity" placeholder="请选择严重级别" clearable>
+            <el-select v-model="ruleForm.severity" placeholder="请选择严重级别" clearable>
               <el-option label="P0致命" value="P0"></el-option>
               <el-option label="P1严重" value="P1"></el-option>
               <el-option label="P2一般" value="P2"></el-option>
@@ -25,32 +25,32 @@
             </el-select>
           </el-form-item>
           <el-form-item label="所属项目" prop="severity">
-            <el-select v-model="bugForm.project" placeholder="请选择所属项目" clearable>
+            <el-select v-model="ruleForm.project" placeholder="请选择所属项目" clearable>
               <el-option label="项目1" value="project1"></el-option>
               <el-option label="项目1" value="project2"></el-option>
               <el-option label="项目1" value="project3"></el-option>
             </el-select>
           </el-form-item>
           <el-form-item label="缺陷描述" prop="description">
-            <el-input type="textarea" v-model="bugForm.description" placeholder="请输入缺陷描述" :rows="8" clearable></el-input>
+            <el-input type="textarea" v-model="ruleForm.description" placeholder="请输入缺陷描述" :rows="8" clearable></el-input>
           </el-form-item>
-          <el-form-item label="附件上传" prop="attachment">
+          <!-- <el-form-item label="附件上传" prop="attachment">
             <el-upload class="upload-drag-area" drag multiple>
               <i class="el-icon-upload"></i>
               <div class="el-upload__text">将文件拖到此处，或<em> 点击上传</em></div>
               <div class="el-upload__tip">只能上传jpg/png文件</div>
             </el-upload>
-          </el-form-item>
+          </el-form-item> -->
           <el-form-item label="执行人员" prop="assignee">
-            <el-select v-model="bugForm.assignee" placeholder="请选择执行人员" clearable>
+            <el-select v-model="ruleForm.assignee" placeholder="请选择执行人员" clearable>
               <el-option label="Assignee 1" value="assignee1"></el-option>
               <el-option label="Assignee 2" value="assignee2"></el-option>
               <el-option label="Assignee 3" value="assignee3"></el-option>
             </el-select>
           </el-form-item>
           <el-form-item>
-            <el-button type="primary" @click="submitForm('bugForm')">提交</el-button>
-            <el-button @click="resetForm('bugForm')">重置</el-button>
+            <el-button type="primary" @click="submitForm('ruleFormRef')">提交</el-button>
+            <el-button @click="resetForm('ruleFormRef')">重置</el-button>
           </el-form-item>
         </el-form>
       </div>
@@ -58,55 +58,52 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      bugForm: {
-        title: '',
-        bugType: '',
-        severity: '',
-        description: '',
-        attachment: '',
-        assignee: '',
-        project: ''
-      },
-      rules: {
-        title: [
-          { required: true, message: '请输入缺陷标题', trigger: 'blur' }
-        ],
-        bugType: [
-          { required: true, message: '请选择缺陷类型', trigger: 'change' }
-        ],
-        severity: [
-          { required: true, message: '请选择严重级别', trigger: 'change' }
-        ],
-        description: [
-          { required: true, message: '请输入缺陷描述', trigger: 'blur' }
-        ],
-        assignee: [
-          { required: true, message: '请选择执行人员', trigger: 'change' }
-        ],
-        project: [
-          { required: true, message: '请选择所属项目', trigger: 'change' }
-        ]
-      },
-      fileList: [] // 用于存储上传的文件列表
-    };
-  },
-  methods: {
-    submitForm(formName) {
-      this.$refs[formName].validate((valid) => {
-      });
-    },
-    resetForm(formName) {
-      this.$refs[formName].resetFields();
+<script lang="ts" setup>
+import BugFormData from './types/bug-from'
+import type { FormInstance, FormRules } from 'element-plus'
+
+const ruleFormRef = ref<FormInstance>()
+const ruleForm = reactive<BugFormData>(
+  new BugFormData()
+)
+
+
+const submitForm = async (formEl: FormInstance | undefined) => {
+  if (!formEl) return
+  await formEl.validate((valid, fields) => {
+    if (valid) {
+      console.log('submit!')
+    } else {
+      console.log('error submit!', fields)
     }
-  },
-  created() {
-  }
+  })
 }
 
+const resetForm = (formEl: FormInstance | undefined) => {
+  if (!formEl) return
+  formEl.resetFields()
+}
+
+const rules = {
+  title: [
+    { required: true, message: '请输入缺陷标题', trigger: 'blur' }
+  ],
+  bugType: [
+    { required: true, message: '请选择缺陷类型', trigger: 'change' }
+  ],
+  severity: [
+    { required: true, message: '请选择严重级别', trigger: 'change' }
+  ],
+  description: [
+    { required: true, message: '请输入缺陷描述', trigger: 'blur' }
+  ],
+  assignee: [
+    { required: true, message: '请选择执行人员', trigger: 'change' }
+  ],
+  project: [
+    { required: true, message: '请选择所属项目', trigger: 'change' }
+  ]
+}
 </script>
 <style scoped lang="scss">
 .bugpage {
@@ -124,8 +121,6 @@ export default {
   width: 100%;
   margin: 0 auto;
 }
-
-
 
 .content {
   position: absolute;

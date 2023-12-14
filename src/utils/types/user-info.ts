@@ -9,6 +9,7 @@ export default class UserInfo {
   public miigo_work_item_ids: string[] = []
 
   public user_key: string = ''
+  public user_key_list: string[] = []
   constructor(params?: { [k in keyof Partial<UserInfo>]: UserInfo[k] }) {
     if (!params) {
       return this

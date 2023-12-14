@@ -1,18 +1,10 @@
 import { defineStore } from 'pinia'
+import UserInfo from '~/utils/types/user-info'
 
-interface IUserState {
-  firstName: string
-  lastName: string
-}
 const useUserStore = defineStore('user', {
-  state: (): IUserState => ({
-    firstName: 'Liu',
-    lastName: 'Dehua'
-  }),
+  state: (): UserInfo => new UserInfo(),
   getters: {
-    fullName(): string {
-      return this.firstName + ' ' + this.lastName
-    }
+    getUserKey: (state: UserInfo) => state.user_key
   }
 })
 

@@ -3,19 +3,27 @@
 </template>
 
 <script lang="ts" setup>
+import { storeToRefs } from 'pinia'
 import { getConfigParameters, getUserInfo, getConsumnerUserKey } from '~/api'
 import TTUserInfo from '~/utils/types/tt-user-info'
 import UserInfo from '~/utils/types/user-info'
 import ttUserInfoJson from '~/mock/tt-userinfo.json'
 import userInfoJson from '~/mock/userinfo.json'
 import userKeyJson from '~/mock/get_consumer_user_key.json'
+import useUserStore from '~/store/modules/user';
+import useTtuserStore from '~/store/modules/ttuser';
+
+const userStore = useUserStore()
+const ttuserStore = useTtuserStore()
 
 let userDataInfo: UserInfo = new UserInfo()
 
 const handleUserKey = (data: any) => {
   if (data.user_key) {
+    userDataInfo.user_key_list = data.user_key
     userDataInfo.user_key = data.user_key[0]
   }
+  userStore.$patch(userDataInfo)
 }
 
 const fetchUserKey = async () => {
@@ -37,6 +45,7 @@ const handleUserInfo = (userList: UserInfo[]) => {
 }
 
 const fetchUserInfo = async (ttUserInfo: TTUserInfo) => {
+
   try {
     const userList: UserInfo[] = await getUserInfo({
       name: ttUserInfo.nickName,
@@ -51,20 +60,9 @@ const fetchUserInfo = async (ttUserInfo: TTUserInfo) => {
 const handleTTUserInfo = (res: any) => {
   if (res.errMsg === 'getUserInfo:ok') {
     const ttUserInfo = new TTUserInfo(res.userInfo)
+    ttuserStore.$patch(ttUserInfo)
     fetchUserInfo(ttUserInfo)
   }
-}
-
-const userInfo = () => {
-  // @ts-ignore
-  window.h5sdk.ready(() => {
-    // @ts-ignore
-    tt.getUserInfo({
-      success(res: any) {
-        handleTTUserInfo(res)
-      },
-    });
-  })
 }
 
 const fetchLogin = async () => {
@@ -80,7 +78,15 @@ const fetchLogin = async () => {
       nonceStr: res.noncestr,
       signature: res.signature,
       onSuccess: (_: any) => {
-        userInfo()
+        // @ts-ignore
+        window.h5sdk.ready(() => {
+        // @ts-ignore
+        tt.getUserInfo({
+          success(res: any) {
+            handleTTUserInfo(res)
+          },
+        });
+      })
       },
       onFail: (error: any) => {
         console.log('h5sdk', '鉴权异常')
