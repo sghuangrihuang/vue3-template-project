@@ -4,8 +4,8 @@
       <div class="content">
         <h1 class="header">缺陷提交表单</h1>
         <el-form :model="ruleForm" :rules="rules" ref="ruleFormRef" label-width="100px" @submit.prevent.stop>
-          <el-form-item label="缺陷标题" prop="title">
-            <el-input v-model="ruleForm.title" placeholder="请输入缺陷标题" clearable></el-input>
+          <el-form-item label="缺陷标题" prop="name">
+            <el-input v-model="ruleForm.name" placeholder="请输入缺陷标题" clearable></el-input>
           </el-form-item>
           <el-form-item label="缺陷类型" prop="bugType">
             <el-select v-model="ruleForm.bugType" placeholder="请选择缺陷类型" clearable>
@@ -41,8 +41,8 @@
               <div class="el-upload__tip">只能上传jpg/png文件</div>
             </el-upload>
           </el-form-item> -->
-          <el-form-item label="执行人员" prop="assignee">
-            <el-select v-model="ruleForm.assignee" placeholder="请选择执行人员" clearable>
+          <el-form-item label="执行人员" prop="role_owners">
+            <el-select v-model="ruleForm.role_owners" placeholder="请选择执行人员" clearable>
               <el-option label="Assignee 1" value="assignee1"></el-option>
               <el-option label="Assignee 2" value="assignee2"></el-option>
               <el-option label="Assignee 3" value="assignee3"></el-option>
@@ -59,14 +59,14 @@
 </template>
 
 <script lang="ts" setup>
+import useUserStore from '~/store/modules/user';
 import BugFormData from './types/bug-from'
 import type { FormInstance, FormRules } from 'element-plus'
-
+const userStore = useUserStore()
 const ruleFormRef = ref<FormInstance>()
 const ruleForm = reactive<BugFormData>(
   new BugFormData()
 )
-
 
 const submitForm = async (formEl: FormInstance | undefined) => {
   if (!formEl) return
@@ -97,12 +97,9 @@ const rules = {
   description: [
     { required: true, message: '请输入缺陷描述', trigger: 'blur' }
   ],
-  assignee: [
+  role_owners: [
     { required: true, message: '请选择执行人员', trigger: 'change' }
   ],
-  project: [
-    { required: true, message: '请选择所属项目', trigger: 'change' }
-  ]
 }
 </script>
 <style scoped lang="scss">

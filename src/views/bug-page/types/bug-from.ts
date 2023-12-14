@@ -1,7 +1,7 @@
 export default class BugFormData {
   public name: string = ''
   public project_key: string = import.meta.env.VITE_APP_PROJRECT_KEY
-  public work_item_type_key: string = ''
+  public work_item_type_key: string = 'issue'
   public template_id: string = ''
   public role_owners: any[] = []
   public description: string = ''
