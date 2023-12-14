@@ -18,17 +18,35 @@
             </el-select>
           </el-form-item>
           <el-form-item label="所属系统" prop="systemsValue">
-            <el-select v-model="ruleForm.systemsValue" placeholder="请选择所属项目" style="width: 100%;" clearable>
-            </el-select>
+            <el-cascader v-model="ruleForm.systemsValue"
+              style="width: 100%;"
+              :options="ruleOption.systemList"
+              :props="{
+                emitPath: false
+              }"
+              @change="onSystemsValueChange">
+            </el-cascader>
           </el-form-item>
           <el-form-item label="缺陷描述" prop="description">
             <el-input type="textarea" v-model="ruleForm.description" placeholder="请输入缺陷描述" :rows="8" clearable></el-input>
           </el-form-item>
           <el-form-item label="测试人员" prop="role_owners">
+            <el-select v-model="ruleForm.role_owners" multiple value-key="user_key" disabled placeholder="请选择测试人员" style="width: 100%;">
+              <el-option v-for="item in ruleOption.roleList" :key="item.user_key" :label="item.tester" :value="item">
+                <div class="role-flex">
+                  <el-image
+                    class="role-avatar"
+                    :src="item.avatar_url"
+                    fit="cover"
+                  />
+                  <div class="role-name"> {{item.tester}}</div>
+                </div>
+              </el-option>
+            </el-select>
           </el-form-item>
           <el-form-item>
-            <el-button type="primary" @click="submitForm(ruleFormRef)">提交</el-button>
-            <el-button @click="resetForm(ruleFormRef)">重置</el-button>
+            <el-button type="primary" @click="handleSubmitForm(ruleFormRef)">提交</el-button>
+            <el-button @click="handleResetForm(ruleFormRef)">重置</el-button>
           </el-form-item>
         </el-form>
       </div>
@@ -51,7 +69,8 @@ const ruleForm = reactive<BugFormData>(
 const ruleOption = reactive<{
   systemList: any[],
   templateList: any[],
-  priorityList: any[]
+  priorityList: any[],
+  roleList: any[]
 }>({
   systemList: [],
   templateList: [
@@ -65,6 +84,7 @@ const ruleOption = reactive<{
     },
   ],
   priorityList: [],
+  roleList: []
 })
 
 // reactive<FormRules<RuleForm>>
@@ -89,7 +109,7 @@ const rules = reactive<FormRules>({
   ],
 })
 
-const submitForm = async (formEl: FormInstance | undefined) => {
+const handleSubmitForm = async (formEl: FormInstance | undefined) => {
   if (!formEl) return
   await formEl.validate((valid, fields) => {
     if (valid) {
@@ -100,7 +120,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
   })
 }
 
-const resetForm = (formEl: FormInstance | undefined) => {
+const handleResetForm = (formEl: FormInstance | undefined) => {
   if (!formEl) return
   formEl.resetFields()
 }
@@ -122,6 +142,13 @@ const fetchWorkFields = async () => {
   }
 }
 
+const onSystemsValueChange = (val) => {
+  const findItem = ruleOption.roleList.find(item => item.valueList.includes(val))
+  if (findItem) {
+    ruleForm.role_owners = [findItem]
+  }
+}
+
 const handleWorkFieldFields = (data: any) => {
   try {
     const form = data.work_item_fields.form
@@ -134,6 +161,11 @@ const handleWorkFieldFields = (data: any) => {
         const systemData = fieldValuePair.systems[0]
         ruleForm.systems = systemData.field_key
         ruleOption.systemList = systemData.field[0].options
+        ruleOption.roleList = ruleOption.systemList.map(item => {
+          item.valueList = item.children.map((child: any) => child.value)
+          return item
+        })
+        console.log(ruleOption.roleList)
       }
     }
   } catch (_) {
@@ -178,6 +210,19 @@ onMounted(() => {
     text-align: center;
     font-size: 30px;
     margin-bottom: 20px;
+  }
+}
+.role-flex {
+  display: flex;
+  align-items: center;
+  .role-avatar {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  .role-name {
+    flex: 1;
   }
 }
 
