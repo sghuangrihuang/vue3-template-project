@@ -48,7 +48,11 @@ const ruleForm = reactive<BugFormData>(
   new BugFormData()
 )
 
-const ruleOption = reactive({
+const ruleOption = reactive<{
+  systemList: any[],
+  templateList: any[],
+  priorityList: any[]
+}>({
   systemList: [],
   templateList: [
     {
