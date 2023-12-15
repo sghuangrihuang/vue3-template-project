@@ -4,7 +4,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import ElementPlus from 'element-plus'
-import VConsole from 'vconsole'
+// import VConsole from 'vconsole'
 import 'element-plus/dist/index.css'
 import "~/styles/index.scss";
 import "uno.css";
@@ -12,7 +12,7 @@ import "uno.css";
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import locale from 'element-plus/lib/locale/lang/zh-cn';
 
-new VConsole()
+// new VConsole()
 
 const app = createApp(App)
 Object.keys(ElementPlusIconsVue).forEach(key => {

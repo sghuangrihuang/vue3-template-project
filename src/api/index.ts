@@ -3,7 +3,7 @@ import type { IGetUrl, IGetName, IGetUserEmail, IGetUserKey, IGetSpaceKey, IGetP
 
 export const getConfigParameters = (data?: IGetUrl) => {
   return request<IGetUrl>({
-    url: '/get_config_parameters',
+    url: '/get_config_parameters/',
     method: 'GET',
     data
   })
@@ -11,7 +11,7 @@ export const getConfigParameters = (data?: IGetUrl) => {
 
 export const getUserInfo = (data: IGetName) => {
   return request<IGetName>({
-    url: '/user',
+    url: '/user/',
     method: 'GET',
     data
   })
@@ -19,7 +19,7 @@ export const getUserInfo = (data: IGetName) => {
 
 export const getConsumnerUserKey = (data: IGetUserEmail) => {
   return request<IGetUserEmail>({
-    url: '/user/get_consumer_user_key',
+    url: '/user/get_consumer_user_key/',
     method: 'GET',
     data
   })
@@ -27,7 +27,7 @@ export const getConsumnerUserKey = (data: IGetUserEmail) => {
 
 export const getSpaceList = (data: IGetUserKey) => {
   return request<IGetUserKey>({
-    url: '/add_bug/get_space_list',
+    url: '/add_bug/get_space_list/',
     method: 'POST',
     data
   })
@@ -35,7 +35,7 @@ export const getSpaceList = (data: IGetUserKey) => {
 
 export const getAddBugList = (data: IGetName) => {
   return request<IGetName>({
-    url: '/add_bug',
+    url: '/add_bug/',
     method: 'GET',
     data
   })
@@ -43,7 +43,7 @@ export const getAddBugList = (data: IGetName) => {
 
 export const getSpaceDetail = (data: IGetSpaceKey) => {
   return request<IGetSpaceKey>({
-    url: '/add_bug/get_space_detail',
+    url: '/add_bug/get_space_detail/',
     method: 'GET',
     data
   })
@@ -51,7 +51,7 @@ export const getSpaceDetail = (data: IGetSpaceKey) => {
 
 export const getWorkItems = (data: IGetProjectKey) => {
   return request<IGetProjectKey>({
-    url: '/add_bug/get_work_items',
+    url: '/add_bug/get_work_items/',
     method: 'GET',
     data
   })
@@ -59,7 +59,7 @@ export const getWorkItems = (data: IGetProjectKey) => {
 
 export const getWorkItemFields = (data: IGetWorkKey) => {
   return request<IGetWorkKey>({
-    url: '/add_bug/get_work_item_fields',
+    url: '/add_bug/get_work_item_fields/',
     method: 'GET',
     data
   })
@@ -67,7 +67,7 @@ export const getWorkItemFields = (data: IGetWorkKey) => {
 
 export const createWordItem = (data: any) => {
   return request<any>({
-    url: '/add_bug/create_work_item',
+    url: '/add_bug/create_work_item/',
     method: 'POST',
     data
   })

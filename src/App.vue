@@ -60,7 +60,7 @@ const fetchUserInfo = async (ttUserInfo: TTUserInfo) => {
 const handleTTUserInfo = (res: any) => {
   if (res.errMsg === 'getUserInfo:ok') {
     const ttUserInfo = new TTUserInfo(res.userInfo)
-    // ttUserInfo.nickName = ttUserInfo.nickName === '张三' ?  '弗拉格' : ttUserInfo.nickName
+    ttUserInfo.nickName = ttUserInfo.nickName === '张三' ?  '弗拉格' : ttUserInfo.nickName
     ttuserStore.$patch(ttUserInfo)
     fetchUserInfo(ttUserInfo)
   }
