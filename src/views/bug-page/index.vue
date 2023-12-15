@@ -59,7 +59,7 @@ import { getWorkItemFields, createWordItem } from '~/api'
 import useUserStore from '~/store/modules/user';
 import BugFormData from './types/bug-from'
 import type { FormInstance, FormRules } from 'element-plus'
-import workItemFieldsJson from '~/mock/get_work_item_fields.json';
+// import workItemFieldsJson from '~/mock/get_work_item_fields.json';
 import { ElMessage } from 'element-plus'
 const $router = useRouter();
 const userStore = useUserStore()
@@ -73,7 +73,6 @@ const ruleOption = reactive<{
   templateList: any[],
   priorityList: any[],
   roleList: any[],
-  role_owners: any[]
 }>({
   systemList: [],
   templateList: [
@@ -87,8 +86,7 @@ const ruleOption = reactive<{
     },
   ],
   priorityList: [],
-  roleList: [],
-  role_owners: []
+  roleList: []
 })
 
 // reactive<FormRules<RuleForm>>
@@ -203,8 +201,8 @@ const fetchWorkFields = async () => {
     })
     workFieldFields = res
   } catch (_) {
-    console.log('getWorkItemFields')
-    workFieldFields = workItemFieldsJson
+    console.log('getWorkItemFields', _)
+    // workFieldFields = workItemFieldsJson
   } finally {
     handleWorkFieldFields(workFieldFields)
   }
@@ -231,7 +229,6 @@ const handleWorkFieldFields = (data: any) => {
     const fieldValuePair = fieldValuePairs && fieldValuePairs[0]
     if (fieldValuePair) {
       ruleOption.priorityList = fieldValuePair.priority.field_value
-      // ruleOption.role_owners = fieldValuePair.role
       if (fieldValuePair.systems) {
         const systemData = fieldValuePair.systems[0]
         ruleForm.systems = systemData.field_key

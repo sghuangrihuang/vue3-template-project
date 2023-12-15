@@ -16,7 +16,7 @@
 <script lang="ts" setup>
 import { getAddBugList } from '~/api'
 import useUserStore from '~/store/modules/user';
-import addBugJson from '~/mock/add_bug.json'
+// import addBugJson from '~/mock/add_bug.json'
 const userStore = useUserStore()
 
 const form = reactive<{
@@ -33,8 +33,7 @@ const fetchAddBugList = async () => {
     form.addBugList = res
   } catch (_) {
     console.log('fetchAddBugList', _)
-    form.addBugList = addBugJson
-    console.log(form.addBugList)
+    // form.addBugList = addBugJson
   }
 }
 

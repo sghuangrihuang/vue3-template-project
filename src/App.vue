@@ -8,9 +8,9 @@
 import { getConfigParameters, getUserInfo, getConsumnerUserKey } from '~/api'
 import TTUserInfo from '~/utils/types/tt-user-info'
 import UserInfo from '~/utils/types/user-info'
-import ttUserInfoJson from '~/mock/tt-userinfo.json'
-import userInfoJson from '~/mock/userinfo.json'
-import userKeyJson from '~/mock/get_consumer_user_key.json'
+// import ttUserInfoJson from '~/mock/tt-userinfo.json'
+// import userInfoJson from '~/mock/userinfo.json'
+// import userKeyJson from '~/mock/get_consumer_user_key.json'
 import useUserStore from '~/store/modules/user';
 import useTtuserStore from '~/store/modules/ttuser';
 
@@ -20,10 +20,8 @@ const ttuserStore = useTtuserStore()
 let userDataInfo: UserInfo = new UserInfo()
 
 const handleUserKey = (data: any) => {
-  if (data.user_key) {
-    userDataInfo.user_key_list = data.user_key
-    userDataInfo.user_key = data.user_key[0]
-  }
+  userDataInfo.user_key_list = data.user_key
+  userDataInfo.user_key = data.user_key[0]
   userStore.$patch(userDataInfo)
 }
 
@@ -32,10 +30,12 @@ const fetchUserKey = async () => {
     const res: any = await getConsumnerUserKey({
       user_email: userDataInfo.email,
     })
-    handleUserKey(res)
+    if (res.user_key) {
+      handleUserKey(res)
+    }
   } catch (_) {
     console.log('fetchUserKey', _)
-    handleUserKey(userKeyJson)
+    // handleUserKey(userKeyJson)
   }
 }
 
@@ -46,7 +46,6 @@ const handleUserInfo = (userList: UserInfo[]) => {
 }
 
 const fetchUserInfo = async (ttUserInfo: TTUserInfo) => {
-
   try {
     const userList: any = await getUserInfo({
       name: ttUserInfo.nickName,
@@ -54,14 +53,14 @@ const fetchUserInfo = async (ttUserInfo: TTUserInfo) => {
     handleUserInfo(userList)
   } catch (_) {
     console.log('getUserInfo', _)
-    handleUserInfo(userInfoJson)
+    // handleUserInfo(userInfoJson)
   }
 }
 
 const handleTTUserInfo = (res: any) => {
   if (res.errMsg === 'getUserInfo:ok') {
     const ttUserInfo = new TTUserInfo(res.userInfo)
-    ttUserInfo.nickName = ttUserInfo.nickName === '张三' ?  '弗拉格' : ttUserInfo.nickName
+    // ttUserInfo.nickName = ttUserInfo.nickName === '张三' ?  '弗拉格' : ttUserInfo.nickName
     ttuserStore.$patch(ttUserInfo)
     fetchUserInfo(ttUserInfo)
   }
@@ -87,6 +86,9 @@ const fetchLogin = async () => {
           success(res: any) {
             handleTTUserInfo(res)
           },
+          fail(res: any) {
+            console.log('getUserInfo', error)
+          }
         });
       })
       },
@@ -96,7 +98,7 @@ const fetchLogin = async () => {
     });
   } catch (_) {
     console.log('getConfigParameters', _)
-    handleTTUserInfo(ttUserInfoJson)
+    // handleTTUserInfo(ttUserInfoJson)
   }
 }
 
