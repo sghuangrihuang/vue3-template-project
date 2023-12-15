@@ -8,6 +8,7 @@
 import { getConfigParameters, getUserInfo, getConsumnerUserKey } from '~/api'
 import TTUserInfo from '~/utils/types/tt-user-info'
 import UserInfo from '~/utils/types/user-info'
+import axios from 'axios'
 // import ttUserInfoJson from '~/mock/tt-userinfo.json'
 // import userInfoJson from '~/mock/userinfo.json'
 // import userKeyJson from '~/mock/get_consumer_user_key.json'
@@ -102,7 +103,20 @@ const fetchLogin = async () => {
   }
 }
 
+const fetchText = async () => {
+  try {
+    await axios.get(`${import.meta.env.VITE_APP_BASE_API}/user`, {
+      params: {
+        name: '弗拉格',
+      }
+    })
+  } catch (_) {
+    console.log(_)
+  }
+}
+
 onMounted(() => {
+  fetchText()
   fetchLogin()
 })
 
