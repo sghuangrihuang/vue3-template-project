@@ -17,6 +17,7 @@ import useTtuserStore from '~/store/modules/ttuser';
 const userStore = useUserStore()
 const ttuserStore = useTtuserStore()
 
+let authorizationUrl: string = ''
 let userDataInfo: UserInfo = new UserInfo()
 
 const handleUserKey = (data: any) => {
@@ -47,9 +48,14 @@ const handleUserInfo = (userList: UserInfo[]) => {
 
 const fetchUserInfo = async (ttUserInfo: TTUserInfo) => {
   try {
-    const userList: any = await getUserInfo({
+    const userList: UserInfo[] = await getUserInfo({
       name: ttUserInfo.nickName,
     })
+    if (userList.length === 0) {
+      // 重定向授权页面
+      window.open(authorizationUrl, '_self')
+      return
+    }
     handleUserInfo(userList)
   } catch (_) {
     console.log('getUserInfo', _)
@@ -72,6 +78,7 @@ const fetchLogin = async () => {
     const res: any = await getConfigParameters({
       url
     })
+    authorizationUrl = ref.Authorization_url
     // @ts-ignore
     window.h5sdk.config({
       appId: res.appid,
